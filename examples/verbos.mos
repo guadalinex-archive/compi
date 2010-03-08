@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<mosaico>
+	<ruta_guardado>/usr/share/doc/compi/examples/verbos.mos</ruta_guardado>
+	<solo_lectura>False</solo_lectura>
+	<modificado>False</modificado>
+	<fecha_creacion>(2008, 2, 25, 11, 57, 16, 0, 56, 0)</fecha_creacion>
+	<espaciado>5</espaciado>
+	<filas>1</filas>
+	<nombre>verbos</nombre>
+	<columnas>2</columnas>
+	<idioma>Spanish</idioma>
+	<modificable>True</modificable>
+	<tabla_botones>
+		<Pulsador_53528528>
+			<fila>0</fila>
+			<columna>0</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans    </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>acciones</pronunciacion>
+			<color_fondo>#e4d352</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>Acciones</nombre>
+			<enlace_a_mosaico>/usr/share/doc/compi/examples/acciones.mos</enlace_a_mosaico>
+		</Pulsador_53528528>
+		<Pulsador_47623107>
+			<fila>0</fila>
+			<columna>1</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans    </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>primera persona</pronunciacion>
+			<color_fondo>#fde951</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>1ª Persona</nombre>
+			<enlace_a_mosaico>/usr/share/doc/compi/examples/primera_persona.mos</enlace_a_mosaico>
+		</Pulsador_47623107>
+	</tabla_botones>
+</mosaico>
+

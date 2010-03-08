@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<mosaico>
+	<ruta_guardado>/home/fernando/Desktop/COMPI-beta_2r1/examples/adjetivos.mos</ruta_guardado>
+	<solo_lectura>False</solo_lectura>
+	<modificado>True</modificado>
+	<fecha_creacion>(2008, 2, 25, 12, 4, 18, 0, 56, 0)</fecha_creacion>
+	<espaciado>5</espaciado>
+	<filas>1</filas>
+	<nombre>adjetivos</nombre>
+	<columnas>3</columnas>
+	<idioma>Spanish</idioma>
+	<modificable>True</modificable>
+	<tabla_botones>
+		<Pulsador_62418934>
+			<fila>0</fila>
+			<columna>0</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>colores</pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>Colores</nombre>
+			<enlace_a_mosaico>/usr/share/doc/compi/examples/colores.mos</enlace_a_mosaico>
+		</Pulsador_62418934>
+		<Pulsador_72624477>
+			<fila>0</fila>
+			<columna>1</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans     </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>adjetivos</pronunciacion>
+			<color_fondo>#b5e856</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>Adjetivos 1</nombre>
+			<enlace_a_mosaico>/usr/share/doc/compi/examples/adjetivos1.mos</enlace_a_mosaico>
+		</Pulsador_72624477>
+		<Pulsador_31616849>
+			<fila>0</fila>
+			<columna>2</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans   </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>emociones</pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>Emociones</nombre>
+			<enlace_a_mosaico>/home/fernando/Desktop/COMPI-beta_2r1/examples/estados.mos</enlace_a_mosaico>
+		</Pulsador_31616849>
+	</tabla_botones>
+</mosaico>
+

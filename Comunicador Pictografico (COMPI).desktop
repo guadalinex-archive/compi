@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=COMPI
+GenericName=COMunicador PIctografico
+Icon=/usr/share/pixmaps/mosaico.png
+Comment= Comunicador pictográfico para personas discapacitadas
+Exec=/usr/bin/compi
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Application;Accessibility
+StartupNotify=false
+Name[es_ES]=Comunicador Pictográfico (COMPI)
+GenericName[es_ES]=Comunicador Pictográfico (COMPI)

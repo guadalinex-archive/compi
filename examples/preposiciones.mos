@@ -1,0 +1,296 @@
+<?xml version="1.0" ?>
+<mosaico>
+	<ruta_guardado>/usr/share/doc/compi/examples/preposiciones.mos</ruta_guardado>
+	<solo_lectura>False</solo_lectura>
+	<modificado>False</modificado>
+	<fecha_creacion>(2008, 2, 15, 10, 29, 47, 4, 46, 0)</fecha_creacion>
+	<espaciado>5</espaciado>
+	<filas>4</filas>
+	<nombre>Preposiciones</nombre>
+	<columnas>5</columnas>
+	<idioma>Spanish</idioma>
+	<modificable>True</modificable>
+	<tabla_botones>
+		<Pulsador_14662185>
+			<fila>0</fila>
+			<columna>0</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>aa</pronunciacion>
+			<color_fondo>#eef51b</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>a </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_14662185>
+		<Pulsador_6910056>
+			<fila>0</fila>
+			<columna>1</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>ante</pronunciacion>
+			<color_fondo>#eef51b</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>ante </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_6910056>
+		<Pulsador_54594088>
+			<fila>0</fila>
+			<columna>2</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>bajo</pronunciacion>
+			<color_fondo>#eef51b</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>bajo </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_54594088>
+		<Pulsador_17021576>
+			<fila>0</fila>
+			<columna>3</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>con</pronunciacion>
+			<color_fondo>#eef51b</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>con </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_17021576>
+		<Pulsador_45102275>
+			<fila>0</fila>
+			<columna>4</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>contra</pronunciacion>
+			<color_fondo>#eef51b</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>contra </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_45102275>
+		<Pulsador_40397116>
+			<fila>1</fila>
+			<columna>0</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>de</pronunciacion>
+			<color_fondo>#eef51b</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>de </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_40397116>
+		<Pulsador_95220496>
+			<fila>1</fila>
+			<columna>1</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>desde</pronunciacion>
+			<color_fondo>#eef51b</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>desde </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_95220496>
+		<Pulsador_72785699>
+			<fila>1</fila>
+			<columna>2</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>durante</pronunciacion>
+			<color_fondo>#eef51b</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>durante </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_72785699>
+		<Pulsador_4656331>
+			<fila>1</fila>
+			<columna>3</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>en</pronunciacion>
+			<color_fondo>#eef51b</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>en </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_4656331>
+		<Pulsador_73556150>
+			<fila>1</fila>
+			<columna>4</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>entre</pronunciacion>
+			<color_fondo>#eef51b</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>entre </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_73556150>
+		<Pulsador_93170455>
+			<fila>2</fila>
+			<columna>0</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>excepto</pronunciacion>
+			<color_fondo>#eef51b</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>excepto </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_93170455>
+		<Pulsador_49118569>
+			<fila>2</fila>
+			<columna>1</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>hacia</pronunciacion>
+			<color_fondo>#eef51b</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>hacia </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_49118569>
+		<Pulsador_89811503>
+			<fila>2</fila>
+			<columna>2</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>hasta</pronunciacion>
+			<color_fondo>#eef51b</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>hasta </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_89811503>
+		<Pulsador_58477520>
+			<fila>2</fila>
+			<columna>3</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>mediante</pronunciacion>
+			<color_fondo>#eef51b</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>mediante </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_58477520>
+		<Pulsador_96671739>
+			<fila>2</fila>
+			<columna>4</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>para</pronunciacion>
+			<color_fondo>#eef51b</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>para </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_96671739>
+		<Pulsador_72946807>
+			<fila>3</fila>
+			<columna>0</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>por</pronunciacion>
+			<color_fondo>#eef51b</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>por </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_72946807>
+		<Pulsador_75430848>
+			<fila>3</fila>
+			<columna>1</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>según</pronunciacion>
+			<color_fondo>#eef51b</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>según </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_75430848>
+		<Pulsador_72563952>
+			<fila>3</fila>
+			<columna>2</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>sin</pronunciacion>
+			<color_fondo>#eef51b</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>sin </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_72563952>
+		<Pulsador_23990284>
+			<fila>3</fila>
+			<columna>3</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>sobre</pronunciacion>
+			<color_fondo>#eef51b</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>sobre </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_23990284>
+		<Pulsador_41715955>
+			<fila>3</fila>
+			<columna>4</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>tras</pronunciacion>
+			<color_fondo>#eef51b</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>tras </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_41715955>
+	</tabla_botones>
+</mosaico>
+

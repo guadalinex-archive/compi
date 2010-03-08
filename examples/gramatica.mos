@@ -1,0 +1,184 @@
+<?xml version="1.0" ?>
+<mosaico>
+	<ruta_guardado>/usr/share/doc/compi/examples/ejemplo1.mos</ruta_guardado>
+	<solo_lectura>False</solo_lectura>
+	<modificado>False</modificado>
+	<fecha_creacion>(2008, 2, 25, 11, 56, 2, 0, 56, 0)</fecha_creacion>
+	<espaciado>5</espaciado>
+	<filas>3</filas>
+	<nombre>Comunicador de ejemplo</nombre>
+	<columnas>4</columnas>
+	<idioma>Spanish</idioma>
+	<modificable>True</modificable>
+	<tabla_botones>
+		<Pulsador_668015>
+			<fila>0</fila>
+			<columna>0</columna>
+			<sonido></sonido>
+			<imagen>./mosaico.png</imagen>
+			<tipo_letra>Sans    </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>pronombres</pronunciacion>
+			<color_fondo>#b9e8bb</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>Pronombres</nombre>
+			<enlace_a_mosaico>/usr/share/doc/compi/examples/pronombres.mos</enlace_a_mosaico>
+		</Pulsador_668015>
+		<Pulsador_54867079>
+			<fila>0</fila>
+			<columna>1</columna>
+			<sonido></sonido>
+			<imagen>./mosaico.png</imagen>
+			<tipo_letra>Sans    </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>verbos</pronunciacion>
+			<color_fondo>#f0db37</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>Verbos</nombre>
+			<enlace_a_mosaico>/usr/share/doc/compi/examples/verbos.mos</enlace_a_mosaico>
+		</Pulsador_54867079>
+		<Pulsador_67769775>
+			<fila>0</fila>
+			<columna>2</columna>
+			<sonido></sonido>
+			<imagen>./mosaico.png</imagen>
+			<tipo_letra>Sans    </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>determinantes</pronunciacion>
+			<color_fondo>#e9cdf4</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>Determinantes</nombre>
+			<enlace_a_mosaico>/usr/share/doc/compi/examples/determinantes.mos</enlace_a_mosaico>
+		</Pulsador_67769775>
+		<Pulsador_84719382>
+			<fila>0</fila>
+			<columna>3</columna>
+			<sonido></sonido>
+			<imagen>./mosaico.png</imagen>
+			<tipo_letra>Sans   </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>sustantivos</pronunciacion>
+			<color_fondo>#bfefed</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>Sustantivos</nombre>
+			<enlace_a_mosaico>/usr/share/doc/compi/examples/sustantivos.mos</enlace_a_mosaico>
+		</Pulsador_84719382>
+		<Pulsador_42250818>
+			<fila>1</fila>
+			<columna>0</columna>
+			<sonido></sonido>
+			<imagen>./mosaico.png</imagen>
+			<tipo_letra>Sans   </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>adverbios</pronunciacion>
+			<color_fondo>#f0304b</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>Adverbios</nombre>
+			<enlace_a_mosaico>/usr/share/doc/compi/examples/adverbios.mos</enlace_a_mosaico>
+		</Pulsador_42250818>
+		<Pulsador_47458883>
+			<fila>1</fila>
+			<columna>1</columna>
+			<sonido></sonido>
+			<imagen>./mosaico.png</imagen>
+			<tipo_letra>Sans    </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>preposiciones</pronunciacion>
+			<color_fondo>#eef51b</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>Preposiciones</nombre>
+			<enlace_a_mosaico>/usr/share/doc/compi/examples/preposiciones.mos</enlace_a_mosaico>
+		</Pulsador_47458883>
+		<Pulsador_33014277>
+			<fila>1</fila>
+			<columna>2</columna>
+			<sonido></sonido>
+			<imagen>./mosaico.png</imagen>
+			<tipo_letra>Sans     </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>adjetivos</pronunciacion>
+			<color_fondo>#c2e87b</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>Adjetivos</nombre>
+			<enlace_a_mosaico>/usr/share/doc/compi/examples/adjetivos.mos</enlace_a_mosaico>
+		</Pulsador_33014277>
+		<Pulsador_90055250>
+			<fila>1</fila>
+			<columna>3</columna>
+			<sonido></sonido>
+			<imagen>./mosaico.png</imagen>
+			<tipo_letra>Sans    </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>conjunciones</pronunciacion>
+			<color_fondo>#7095fc</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>Conjunciones </nombre>
+			<enlace_a_mosaico>/usr/share/doc/compi/examples/conjunciones.mos</enlace_a_mosaico>
+		</Pulsador_90055250>
+		<Pulsador_16725885>
+			<fila>2</fila>
+			<columna>0</columna>
+			<sonido></sonido>
+			<imagen>./mosaico.png</imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion></pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre> </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_16725885>
+		<Pulsador_27091646>
+			<fila>2</fila>
+			<columna>1</columna>
+			<sonido></sonido>
+			<imagen>./mosaico.png</imagen>
+			<tipo_letra>Sans    </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>exclamaciones</pronunciacion>
+			<color_fondo>#cf17a1</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>Exclamaciones</nombre>
+			<enlace_a_mosaico>/usr/share/doc/compi/examples/exclamaciones.mos</enlace_a_mosaico>
+		</Pulsador_27091646>
+		<Pulsador_48907823>
+			<fila>2</fila>
+			<columna>2</columna>
+			<sonido></sonido>
+			<imagen>./mosaico.png</imagen>
+			<tipo_letra>Sans    </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>signos de puntuación</pronunciacion>
+			<color_fondo>#000000</color_fondo>
+			<color_letra>#ffffff</color_letra>
+			<nombre>Signos</nombre>
+			<enlace_a_mosaico>/usr/share/doc/compi/examples/signos.mos</enlace_a_mosaico>
+		</Pulsador_48907823>
+		<Pulsador_27105108>
+			<fila>2</fila>
+			<columna>3</columna>
+			<sonido></sonido>
+			<imagen>./mosaico.png</imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion></pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre> </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_27105108>
+	</tabla_botones>
+</mosaico>
+

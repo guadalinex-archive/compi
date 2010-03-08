@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+<mosaico>
+	<ruta_guardado>/usr/share/doc/compi/examples/formas.mos</ruta_guardado>
+	<solo_lectura>False</solo_lectura>
+	<modificado>True</modificado>
+	<fecha_creacion>(2008, 2, 15, 11, 47, 13, 4, 46, 0)</fecha_creacion>
+	<espaciado>5</espaciado>
+	<filas>2</filas>
+	<nombre>Formas</nombre>
+	<columnas>3</columnas>
+	<idioma>Spanish</idioma>
+	<modificable>True</modificable>
+	<tabla_botones>
+		<Pulsador_12770546>
+			<fila>0</fila>
+			<columna>0</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>cuadrado</pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>cuadrado </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_12770546>
+		<Pulsador_20030658>
+			<fila>0</fila>
+			<columna>1</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>rectángulo</pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>rectángulo </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_20030658>
+		<Pulsador_26748152>
+			<fila>0</fila>
+			<columna>2</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>círculo</pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>círculo </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_26748152>
+		<Pulsador_712133>
+			<fila>1</fila>
+			<columna>0</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>triángulo</pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>triángulo </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_712133>
+		<Pulsador_94531312>
+			<fila>1</fila>
+			<columna>1</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>estrella</pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>estrella </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_94531312>
+		<Pulsador_23550523>
+			<fila>1</fila>
+			<columna>2</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>óvalo</pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>óvalo </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_23550523>
+	</tabla_botones>
+</mosaico>
+

@@ -1,0 +1,72 @@
+                        Compi Readme
+   Versión Beta
+   por Fernando Ruiz
+   fruiz@forja.guadalinex.org
+
+   Acerca de
+
+     El Comunicador Pictográfico de Guadalinex (COMPI) es una aplicación escrita en Python 
+     con el fin de ofrecer una herramienta para todas aquellas personas con algún tipo de 
+     dificultad para establecer una comunicación verbal y/o escrita.
+
+   Instalación en Guadalinex V4
+
+     El programa se instala desde consola ejecutando el comando:
+     
+        sudo python2.4 setup.py.install
+        
+     Si desea tener soporte para sonidos ya grabados, como archivos .wav, .mp3 o .ogg 
+     es necesario instalar las librerías que incluye el programa Pymedia (www.pymedia.org)
+     Puede descargar  e instalar el paquete Debian directamente de la dirección:
+     "http://downloads.sourceforge.net/pymedia/pymedia_1.3.5_i686-py2.4.deb"
+
+   Ayuda
+
+     Si necesita algún tipo de ayuda o desea hacer alguna sugerencia el equipo de desarrolladores
+     estará encantado de atenderle. Puede ponerse en contacto con cualquiera de los desarrolladores
+     via e-mail
+
+   Creditos
+
+     * Desarrolladores:
+           'Emilia Abad Sánchez <ailime@forja.guadalinex.org>'
+           'Fernando Ruiz Humanes <fruiz@forja.guadalinex.org>'
+           'Javier Muñoz Díaz <javier.munoz@cofiman.es>'
+     Gracias a todos los que han contribuido en este proyecto.
+
+   Dependencias
+
+     El programa no necesita instalar ningún paquete extra para funcionar sobre la distribución
+     Guadalinex V4 y posteriores. Sin embargo, si utiliza otra distribucción o tiene algún 
+     problema asegúrese de tener instalados los siguientes programas.
+     - python2.4
+     - python-gtk2 
+     - python-imaging 
+     - python-gconf
+     - festival 
+    *Se recomienda tener instaladas las voces en Español, Hispavoces, alojadas en 
+        http://forja.guadalinex.org/repositorio/projects/hispavoces/
+     - Pymedia (recomendado)
+
+   Todo / Ideas
+   
+     * Soporte para varios Idiomas
+     * Envío de mensajes por correo electrónico
+     * Integración con otro progamas (por ejemplo, Gaim)
+
+   Licencia
+     
+     Este programa es software libre. Puede redistribuirlo y/o modificarlo bajo los términos de 
+     la Licencia Pública General de GNU según es publicada por la Free Software Foundation, bien
+     de la versión 2 de dicha Licencia o bien (según su elección) de cualquier versión posterior.
+
+     Este programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA, 
+     incluso sin la garantía MERCANTIL implícita o sin garantizar la CONVENIENCIA PARA UN PROPÓSITO
+     PARTICULAR. Véase la Licencia Pública General de GNU para más detalles.
+
+     Debería haber recibido una copia de la Licencia Pública General junto con este programa. 
+     Si no ha sido así, escriba a la Free Software Foundation, Inc., en 675 Mass Ave, Cambridge,
+     MA 02139, EEUU.
+     
+  
+  
