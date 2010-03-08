@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<oaf_info>
+
+	<oaf_server iid="OAFIID:GNOME_ScanApplet_Factory" type="exe" location="/usr/lib/python2.5/site-packages/scanApplet.py">
+		<oaf_attribute name="repo_ids" type="stringv">
+		        <item value="IDL:Bonobo/GenericFactory:1.0"/>
+		        <item value="IDL:Bonobo/Unknown:1.0"/>
+		</oaf_attribute>
+		<oaf_attribute name="name" type="string" value="Barrido de pantalla"/>
+		<oaf_attribute name="description" type="string" value="Auto movements for the pointer"/>
+	</oaf_server>
+
+	<oaf_server iid="OAFIID:GNOME_ScanApplet" type="factory" location="OAFIID:GNOME_ScanApplet_Factory">
+		<oaf_attribute name="repo_ids" type="stringv">
+		        <item value="IDL:GNOME/Vertigo/PanelAppletShell:1.0"/>
+		        <item value="IDL:Bonobo/Control:1.0"/>
+		        <item value="IDL:Bonobo/Unknown:1.0"/>
+		</oaf_attribute>
+		<oaf_attribute name="name" type="string" value="Barrido de pantalla"/>
+		<oaf_attribute name="description" type="string" value="Controla el movimiento del puntero con una tecla"/>
+		<oaf_attribute name="panel:category" type="string" value="Utilidades"/>
+		<oaf_attribute name="panel:icon" type="string" value="gnome-background-image.png"/>
+	</oaf_server>
+
+</oaf_info>

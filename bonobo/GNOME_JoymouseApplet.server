@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<oaf_info>
+
+    <oaf_server iid="OAFIID:GNOME_JoymouseApplet_Factory" type="exe" location="/usr/lib/python2.5/site-packages/joyApplet.py">
+        <oaf_attribute name="repo_ids" type="stringv">
+                <item value="IDL:Bonobo/GenericFactory:1.0"/>
+                <item value="IDL:Bonobo/Unknown:1.0"/>
+        </oaf_attribute>
+        <oaf_attribute name="name" type="string" value="Joymouse"/>
+        <oaf_attribute name="description" type="string" value="Control del puntero con un joystick"/>
+    </oaf_server>
+
+    <oaf_server iid="OAFIID:GNOME_JoymouseApplet" type="factory" location="OAFIID:GNOME_JoymouseApplet_Factory">
+        <oaf_attribute name="repo_ids" type="stringv">
+                <item value="IDL:GNOME/Vertigo/PanelAppletShell:1.0"/>
+                <item value="IDL:Bonobo/Control:1.0"/>
+                <item value="IDL:Bonobo/Unknown:1.0"/>
+        </oaf_attribute>
+        <oaf_attribute name="name" type="string" value="Joymouse"/>
+        <oaf_attribute name="description" type="string" value="Control del puntero con un joystick"/>
+        <oaf_attribute name="panel:category" type="string" value="Utilidades"/>
+        <oaf_attribute name="panel:icon" type="string" value="gnome-background-image.png"/>
+    </oaf_server>
+
+</oaf_info>

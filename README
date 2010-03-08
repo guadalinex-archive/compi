@@ -1,0 +1,81 @@
+                        Applets de accesibilidad Readme
+   Versión inicial 0.1
+   por Fernando Ruiz
+   fruiz@forja.guadalinex.org
+
+   Acerca de
+
+     Los applets de accesibilidad son pequeñas aplicaciones escritas en Python 
+     con el fin de ofrecer una ayuda para todas aquellas personas con algún tipo de 
+     dificultad para utilizar el escritorio de GNOME.
+     Los applets que se incluyen son:
+
+     * Barrido de pantalla: esta utilidad permite que el puntero del ratón recorra
+     toda la pantalla tanto en direccion vertical como horizontal. Para cambiar entre
+     una u otra dirección se presionará la tecla 'Intro' y para pausar momentaneamente
+     el movimiento se presionará la tecla 'del'.
+
+     * Control del ratón: una vez activada la aplicación se irá sucediendo las posibles acciones
+     que se desea que relaice el ratón. Para seleccionar una de ellas solo es necesario 
+     presionar la tecla 'Intro'
+
+     * Joymouse: esta aplicación permite usar un dispositivo de videojuegos, ya sea joystick o 
+     joypad, como si de un ratón se tratara.
+
+     * Saltos de ratón: este applet permite registrar los lugares donde se ha presionado el botón
+     izquierdo del ratón para posteriormente recorrerlos de forma secuencial.
+
+     Todos los applets se inician y se detiene haciendo clic sobre la imagen del mismo.
+
+   Instalación en Guadalinex V4
+
+     La instalación del programa se realiza desde una terminal ejecutando el siguiente
+     comando en la carpeta donde se ha extraido el código fuente:
+         sudo python2.5 setup.py install
+     Previa a la instalación es preciso instalar los paquetes listados en la sección 
+     'Dependencias'
+     Es posible que para que los cambios tengan efecto sea necesario volver a iniciar sesión.
+
+   Ayuda
+
+     Si necesita algún tipo de ayuda o desea hacer alguna sugerencia el equipo de desarrolladores
+     estará encantado de atenderle. Puede ponerse en contacto con cualquiera de los desarrolladores
+     via e-mail
+
+   Creditos
+
+     * Desarrolladores:
+	   'Emilia Abad Sánchez <ailime@forja.guadalinex.org>'
+           'Fernando Ruiz Humanes <fruiz@forja.guadalinex.org>'
+           'Javier Muñoz Díaz <javier.munoz@cofiman.es>'
+     Gracias a todos los que han contribuido en este proyecto.
+
+   Dependencias
+
+     Para compilar los applets son precisos los siquientes paquetes:
+      - python-xlib
+      - libxtst-dev
+      - python2.5-dev
+     Adiccionalmente es preciso descargar e instalar el paquete Joymouse de la siguiente dirección:
+      http://downloads.sourceforge.net/joymouse-linux/joymouse_0.5-1_i386.deb
+
+   Todo / Ideas
+   
+     * mejoras gráficas y de accesibilidad
+
+   Licencia
+     
+     Este programa es software libre. Puede redistribuirlo y/o modificarlo bajo los términos de 
+     la Licencia Pública General de GNU según es publicada por la Free Software Foundation, bien
+     de la versión 2 de dicha Licencia o bien (según su elección) de cualquier versión posterior.
+
+     Este programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA, 
+     incluso sin la garantía MERCANTIL implícita o sin garantizar la CONVENIENCIA PARA UN PROPÓSITO
+     PARTICULAR. Véase la Licencia Pública General de GNU para más detalles.
+
+     Debería haber recibido una copia de la Licencia Pública General junto con este programa. 
+     Si no ha sido así, escriba a la Free Software Foundation, Inc., en 675 Mass Ave, Cambridge,
+     MA 02139, EEUU.
+     
+  
+  
