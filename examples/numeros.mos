@@ -1,0 +1,184 @@
+<?xml version="1.0" ?>
+<mosaico>
+	<ruta_guardado>/home/fernando/Desktop/COMPI-beta_2r1/examples/numeros.mos</ruta_guardado>
+	<solo_lectura>False</solo_lectura>
+	<modificado>False</modificado>
+	<fecha_creacion>(2008, 3, 7, 10, 16, 13, 4, 67, 0)</fecha_creacion>
+	<espaciado>5</espaciado>
+	<filas>3</filas>
+	<nombre>Números</nombre>
+	<columnas>4</columnas>
+	<idioma>Spanish</idioma>
+	<modificable>True</modificable>
+	<tabla_botones>
+		<Pulsador_89951330>
+			<fila>0</fila>
+			<columna>0</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>40</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>uno</pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#fa0101</color_letra>
+			<nombre>1</nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_89951330>
+		<Pulsador_94696621>
+			<fila>0</fila>
+			<columna>1</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>40</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>dos</pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#ff6800</color_letra>
+			<nombre>2</nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_94696621>
+		<Pulsador_29752807>
+			<fila>0</fila>
+			<columna>2</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>40</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>tres</pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#fff000</color_letra>
+			<nombre>3</nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_29752807>
+		<Pulsador_54330638>
+			<fila>0</fila>
+			<columna>3</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>40</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>cuatro</pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#afff00</color_letra>
+			<nombre>4</nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_54330638>
+		<Pulsador_85673918>
+			<fila>1</fila>
+			<columna>0</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>40</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>cinco</pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#50ff00</color_letra>
+			<nombre>5</nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_85673918>
+		<Pulsador_61393155>
+			<fila>1</fila>
+			<columna>1</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>40</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>seis</pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#00ff9b</color_letra>
+			<nombre>6</nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_61393155>
+		<Pulsador_89252054>
+			<fila>1</fila>
+			<columna>2</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>40</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>siete</pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#00f1ff</color_letra>
+			<nombre>7</nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_89252054>
+		<Pulsador_12202692>
+			<fila>1</fila>
+			<columna>3</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>40</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>ocho</pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#0060ff</color_letra>
+			<nombre>8</nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_12202692>
+		<Pulsador_47900861>
+			<fila>2</fila>
+			<columna>0</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>40</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>nueve</pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#9600ff</color_letra>
+			<nombre>9</nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_47900861>
+		<Pulsador_13352980>
+			<fila>2</fila>
+			<columna>1</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>40</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>diez</pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#ff00f6</color_letra>
+			<nombre>10</nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_13352980>
+		<Pulsador_97971793>
+			<fila>2</fila>
+			<columna>2</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans </tipo_letra>
+			<size_letra>40</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>cero</pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>0</nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_97971793>
+		<Pulsador_38891771>
+			<fila>2</fila>
+			<columna>3</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans </tipo_letra>
+			<size_letra>40</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion></pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre> </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_38891771>
+	</tabla_botones>
+</mosaico>
+

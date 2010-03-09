@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+<mosaico>
+	<ruta_guardado>/usr/share/doc/compi/examples/adverbios.mos</ruta_guardado>
+	<solo_lectura>False</solo_lectura>
+	<modificado>True</modificado>
+	<fecha_creacion>(2008, 2, 25, 11, 59, 22, 0, 56, 0)</fecha_creacion>
+	<espaciado>5</espaciado>
+	<filas>2</filas>
+	<nombre>adverbios</nombre>
+	<columnas>3</columnas>
+	<idioma>Spanish</idioma>
+	<modificable>True</modificable>
+	<tabla_botones>
+		<Pulsador_46092386>
+			<fila>0</fila>
+			<columna>0</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>adverbios de modo</pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>Modo</nombre>
+			<enlace_a_mosaico>/usr/share/doc/compi/examples/modo.mos</enlace_a_mosaico>
+		</Pulsador_46092386>
+		<Pulsador_33484394>
+			<fila>0</fila>
+			<columna>1</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>adverbios de lugar</pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>Lugar</nombre>
+			<enlace_a_mosaico>/usr/share/doc/compi/examples/lugar.mos</enlace_a_mosaico>
+		</Pulsador_33484394>
+		<Pulsador_38418192>
+			<fila>0</fila>
+			<columna>2</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>adverbios de tiempo</pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>Tiempo</nombre>
+			<enlace_a_mosaico>/usr/share/doc/compi/examples/tiempo.mos</enlace_a_mosaico>
+		</Pulsador_38418192>
+		<Pulsador_63842711>
+			<fila>1</fila>
+			<columna>0</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>otros adverbios</pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>Otros</nombre>
+			<enlace_a_mosaico>/usr/share/doc/compi/examples/otros.mos</enlace_a_mosaico>
+		</Pulsador_63842711>
+		<Pulsador_23990186>
+			<fila>1</fila>
+			<columna>1</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>adverbios de cantidad</pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>Cantidad</nombre>
+			<enlace_a_mosaico>/usr/share/doc/compi/examples/cantidad.mos</enlace_a_mosaico>
+		</Pulsador_23990186>
+		<Pulsador_4364116>
+			<fila>1</fila>
+			<columna>2</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans   </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>volver</pronunciacion>
+			<color_fondo>#ffffff</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>Volver</nombre>
+			<enlace_a_mosaico>/usr/share/doc/compi/examples/ejemplo1.mos</enlace_a_mosaico>
+		</Pulsador_4364116>
+	</tabla_botones>
+</mosaico>
+

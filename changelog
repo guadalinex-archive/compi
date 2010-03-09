@@ -1,0 +1,13 @@
+Beta 1:
+	* Versión inicial
+
+Beta 2:
+	* Incluido mensaje inicial
+	* Código fuente modularizado
+	* Script de instalación
+	* Soporte para envío de correos
+	* Integración con applets de accesibilidad
+	* Añadido lanzador al menú de GNOME
+
+    revisión 1:
+    * Añadidos ejemplo en /usr/share/doc/compi/examples
