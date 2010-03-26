@@ -261,9 +261,9 @@ class Pulsador (gtk.Button):
     def insertar(self):
         out = config.gui.out
         w, h = out["layout"].get_size()
-        relative = os.path.join(self.path, os.path.split(self.config["enlace_a_mosaico"])[1])
-        print relative
         if self.config["enlace_a_mosaico"]:
+            relative = os.path.join(self.path, os.path.split(self.config["enlace_a_mosaico"])[1])
+            print relative
             if os.path.exists(self.config["enlace_a_mosaico"]):
                 print "Abriendo mosaico %s..." % os.path.split(self.config["enlace_a_mosaico"])[1]
                 config.gui.abrir(None, self.config["enlace_a_mosaico"])
@@ -433,7 +433,7 @@ class Propiedades:
         self.entrypron.connect("focus-out-event", self.actualizar)
         
         
-        if not player.pymedia_installed or p.tipo=="contacto":
+        if p.tipo=="contacto":
             sound.set_sensitive(False)
             self.entrysound.set_sensitive(False)
             ex1.set_sensitive(False)

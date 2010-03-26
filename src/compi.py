@@ -27,7 +27,7 @@ idioma = "spanish"
 
 # Globals
 name = "COMPI"
-version = "beta 2"
+version = "beta 3"
 host = "localhost"
 festival_port = 1314
 
@@ -719,7 +719,9 @@ def run_tool(widget, tool):
 
 
 
-def main():	
+def main():
+    global host
+    global festival_port
     signal.signal(signal.SIGCHLD,signal.SIG_IGN)
     config.player = Player(host, festival_port)
     pid = os.fork()
@@ -743,6 +745,7 @@ def main():
                 print "Falló"
             else:
                 print "OK"
+        compigtk.salir(None, None)
     else:
         config.player.run_festival()
 

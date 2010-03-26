@@ -3,7 +3,7 @@ from distutils.extension import Extension
 import os
 import glob
 
-nombre = "COMPI"
+nombre = "compi"
 vers = "beta_3r1"
 
 examples_dir = '/usr/share/doc/%s_%s/examples' %(nombre, vers)

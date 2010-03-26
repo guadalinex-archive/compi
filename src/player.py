@@ -5,12 +5,7 @@ import socket
 import codecs
 import config
 import time
-try:
-    import pymedia
-    pymedia_installed = True
-except:
-    print "Download Pyplayer from http://sourceforge.net/project/showfiles.php?group_id=86491&package_id=89813&release_id=368116 and use python2.4"
-    pymedia_installed = False
+import pygame
 
 _ = config._
 
@@ -20,8 +15,8 @@ class Player:
         self.host = host
         self.port = port
         self.socket = None
-        global pymedia_installed
-        self.pymedia_installed = pymedia_installed
+
+
 
     def run_festival(self):
         try:
@@ -42,38 +37,20 @@ class Player:
         return self.socket
         
     def play_audio(self, file):
-        
-        if not self.pymedia_installed:
-            return "Pymedia not installed"
-        elif os.path.exists(file):
-            i = 0
-            while i < 5:
-                try:
-                    dsp = open("/dev/dsp",'w')
-                except:
-                    print ("Intento %d: Dispositivo de sonido ocupado" % i)
-                    time.sleep(1)
-                    i += 1
-                else:
-                    dsp.close()
-                    try:
-                        print "\tIniciando PyMedia..."
-                        player = pymedia.Player()
-                        player.start()
-                        print "\tCargando archivo '%s'..." % os.path.split(file)[1]
-                        player.startPlayback(file)
-                        #duracion = player.getLength()
-                        while player.isPlaying():
-                            time.sleep( 0.01 )
-                        i = 7
-                    except:
-                        print "No se pudo iniciar Pymedia\n"
-                        player.stopPlayback()
-                    else:
-                        print "OK\n"
-            if i == 6:
-                print ("No fue posible acceder al dispositivo de audio '/dev/dsp'.")
-                print ("Compruebe que no haya otro programa haciendo uso de él.")
+        if os.path.exists(file):
+            try:
+                pygame.mixer.music.load(file)
+                pygame.mixer.music.play()
+            except:
+                print "Fallo al repoducir el archivo %s" % file
+       
+    def stop_audio(self):
+        try:
+            pygame.mixer.init()
+            pygame.mixer.music.stop()
+            pygame.mixer.quit()
+        except:
+            print "Fallo detener la reproduccion"
 
     def read_text(self, text):
         try:
@@ -84,6 +61,7 @@ class Player:
         data = None
         try:
             if len(text) > 1:
+                self.stop_audio()
                 self.socket.send("(SayText \"%s\")" % text.decode("utf-8").encode("iso-8859-15"))
                 while not data:
                     data = self.socket.recv(1024)
