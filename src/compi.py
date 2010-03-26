@@ -332,6 +332,7 @@ class gui:
         config.gui = self
 
     def salir(self, widget, event, data=None):
+        self.window.destroy()
         gtk.main_quit()
 
     def pantalla_completa(self, widget):
@@ -745,7 +746,6 @@ def main():
                 print "Falló"
             else:
                 print "OK"
-        compigtk.salir(None, None)
     else:
         config.player.run_festival()
 
