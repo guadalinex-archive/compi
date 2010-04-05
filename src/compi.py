@@ -66,7 +66,7 @@ class gui:
         #print default_config
         self.window = gtk.Window()
         self.window.set_title(name + " " + version)
-        self.window.set_default_size(700,570)
+        self.window.set_default_size(800,460)
         self.window.set_border_width(1)
         self.window.move(150,50)
         self.window.connect("delete_event", self.salir)
@@ -329,6 +329,7 @@ class gui:
         self.window.show_all()
         self.salida2.hide()
         self.acciones2.hide()
+        self.toolbar.hide()
         config.gui = self
 
     def salir(self, widget, event, data=None):
@@ -338,11 +339,11 @@ class gui:
     def pantalla_completa(self, widget):
         self.fullscreen = not self.fullscreen
         if self.fullscreen:
-            self.toolbar.hide()
+            #self.toolbar.hide()
             self.menubar.hide()
             self.window.fullscreen()
         else:
-            self.toolbar.show()
+            #self.toolbar.show()
             self.menubar.show()
             self.window.unfullscreen()
 
@@ -402,6 +403,7 @@ class gui:
         self.opened_mos.insert(pos, mos)
         self.nuevo.destroy()
         self.notebook.show_all()
+        self.notebook.set_current_page(pos)
 
     def insertar_fila(self, widget):
         x = self.notebook.get_current_page()

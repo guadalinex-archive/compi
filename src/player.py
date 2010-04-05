@@ -39,6 +39,7 @@ class Player:
     def play_audio(self, file):
         if os.path.exists(file):
             try:
+                pygame.mixer.init()
                 pygame.mixer.music.load(file)
                 pygame.mixer.music.play()
             except:
@@ -46,9 +47,9 @@ class Player:
        
     def stop_audio(self):
         try:
-            pygame.mixer.init()
-            pygame.mixer.music.stop()
+            #pygame.mixer.music.stop()
             pygame.mixer.quit()
+            time.sleep(1.0)
         except:
             print "Fallo detener la reproduccion"
 
