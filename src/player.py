@@ -6,6 +6,7 @@ import codecs
 import config
 import time
 import pygame
+import subprocess
 
 _ = config._
 
@@ -14,20 +15,27 @@ class Player:
     def __init__(self, host="localhost", port=1314):
         self.host = host
         self.port = port
+        self.fest = None
         self.socket = None
-
-
 
     def run_festival(self):
         try:
             print "Arrancando sintetizador de voces festival en modo servidor..."
-            os.execv("/usr/bin/festival", ["festival", "--server"])
+            self.fest = subprocess.Popen(["/usr/bin/festival", "--server"])
         except:
             print "Error al inicar el servidor de voces"
             return 1
         
+    def stop_festival(self):
+        try:
+            print "Deteniendo sintetizador de voces festival..."
+            self.fest.terminate()
+            self.fest.wait()
+        except:
+            print "Error al detener el servidor de voces"
+            return 1
+    
     def connect(self):
-        time.sleep(2)
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         print "Conectando con el servidor festival (%s:%s)..." % (self.host, self.port)
         try:

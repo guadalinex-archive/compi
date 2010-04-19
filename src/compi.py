@@ -4,11 +4,12 @@
 import pygtk
 pygtk.require('2.0')
 import gtk
+gtk.gdk.threads_init()
 import gobject
 
 import time
+from threading import Timer
 import os
-import signal
 import gconf_prefs
 import config
 
@@ -57,13 +58,26 @@ def aviso(msg, link = None):
     aviso.run()
     aviso.destroy()
 
+def aviso_temporizado(msg, timeout = 5):
+    aviso = gtk.Dialog(_('Aviso'), None, gtk.DIALOG_DESTROY_WITH_PARENT,
+         (gtk.STOCK_OK, gtk.RESPONSE_CLOSE))
+    mensaje = gtk.Label(msg)
+    logoad = gtk.Image()
+    iconad = aviso.render_icon(gtk.STOCK_DIALOG_WARNING, 1)
+    aviso.set_icon(iconad)
+    aviso.vbox.pack_start(mensaje)
+    aviso.show_all()
+    t = Timer(timeout, aviso.destroy)
+    t.start()
+    aviso.run()
+    aviso.destroy()
 
 class gui:
 
     def __init__(self):
         #read default config from gconf
         default_config = config.global_config
-        #print default_config
+
         self.window = gtk.Window()
         self.window.set_title(name + " " + version)
         self.window.set_default_size(800,460)
@@ -681,7 +695,7 @@ class gui:
         dialog = gtk.AboutDialog()
         dialog.set_name(name)
         dialog.set_version(version)
-        dialog.set_copyright("Copyright © 2007 Fernando Ruiz")
+        dialog.set_copyright("Copyright © 2007-2010 Fernando Ruiz")
         #dialog.set_website(self.url)
         #dialog.set_website_label(self.url)
         dialog.set_authors([
@@ -725,31 +739,23 @@ def run_tool(widget, tool):
 def main():
     global host
     global festival_port
-    signal.signal(signal.SIGCHLD,signal.SIG_IGN)
     config.player = Player(host, festival_port)
-    pid = os.fork()
-    if pid: # proceso padre
-        time.sleep(2)
-        started_tools["festival"] = pid
-        s = config.player.connect()
-        if s:
-            compigtk = gui()
-            gobject.idle_add(config.player.read_text, _("Bienvenido al comunicador pictográfico de Guadalinex"))
-            compigtk.main()
-            for pid in started_tools.values():
-                try:
-                    os.kill(pid, signal.SIGKILL)
-                except: pass
-            s.close()
-            print "Eliminando archivos temporales..."
-            try:
-                rmtree(config.temp_dir)
-            except:
-                print "Falló"
-            else:
-                print "OK"
-    else:
-        config.player.run_festival()
+    config.player.run_festival()
+    aviso_temporizado(_("Iniciando el motor de voces. Espere por favor."))
+    s = config.player.connect()
+    if s:
+        compigtk = gui()
+        gobject.idle_add(config.player.read_text, _("Bienvenido al comunicador pictográfico de Guadalinex"))
+        compigtk.main()
+        s.close()
+        config.player.stop_audio()
+        print "Eliminando archivos temporales..."
+        try:
+            rmtree(config.temp_dir)
+        except:
+            print "Falló"
+        else:
+            print "OK"
 
 if __name__ == "__main__":
 	main()
