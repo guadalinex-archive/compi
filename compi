@@ -1,0 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+from compi import compi
+compi.run_gui()
+exit()

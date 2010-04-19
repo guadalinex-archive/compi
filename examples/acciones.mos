@@ -1,0 +1,352 @@
+<?xml version="1.0" ?>
+<mosaico>
+	<ruta_guardado>/usr/share/doc/compi/examples/acciones.mos</ruta_guardado>
+	<solo_lectura>False</solo_lectura>
+	<modificado>True</modificado>
+	<fecha_creacion>(2008, 2, 25, 11, 33, 27, 0, 56, 0)</fecha_creacion>
+	<espaciado>5</espaciado>
+	<filas>4</filas>
+	<nombre>Acciones</nombre>
+	<columnas>6</columnas>
+	<idioma>Spanish</idioma>
+	<modificable>True</modificable>
+	<tabla_botones>
+		<Pulsador_7973955>
+			<fila>0</fila>
+			<columna>0</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>comer</pronunciacion>
+			<color_fondo>#e4d352</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>comer </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_7973955>
+		<Pulsador_78668491>
+			<fila>0</fila>
+			<columna>1</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>dormir</pronunciacion>
+			<color_fondo>#e4d352</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>dormir </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_78668491>
+		<Pulsador_27517653>
+			<fila>0</fila>
+			<columna>2</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>jugar</pronunciacion>
+			<color_fondo>#e4d352</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>jugar </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_27517653>
+		<Pulsador_87883680>
+			<fila>0</fila>
+			<columna>3</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>ver</pronunciacion>
+			<color_fondo>#e4d352</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>ver </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_87883680>
+		<Pulsador_89271020>
+			<fila>0</fila>
+			<columna>4</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>usar</pronunciacion>
+			<color_fondo>#e4d352</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>usar </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_89271020>
+		<Pulsador_24529881>
+			<fila>0</fila>
+			<columna>5</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>abrir</pronunciacion>
+			<color_fondo>#e4d352</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>abrir </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_24529881>
+		<Pulsador_14151191>
+			<fila>1</fila>
+			<columna>0</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>oir</pronunciacion>
+			<color_fondo>#e4d352</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>oir </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_14151191>
+		<Pulsador_49838157>
+			<fila>1</fila>
+			<columna>1</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>salir</pronunciacion>
+			<color_fondo>#e4d352</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>salir </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_49838157>
+		<Pulsador_54453546>
+			<fila>1</fila>
+			<columna>2</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>hablar</pronunciacion>
+			<color_fondo>#e4d352</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>hablar </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_54453546>
+		<Pulsador_8704759>
+			<fila>1</fila>
+			<columna>3</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>tener</pronunciacion>
+			<color_fondo>#e4d352</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>tener </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_8704759>
+		<Pulsador_87312612>
+			<fila>1</fila>
+			<columna>4</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>buscar</pronunciacion>
+			<color_fondo>#e4d352</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>buscar </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_87312612>
+		<Pulsador_84108830>
+			<fila>1</fila>
+			<columna>5</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>cerrar</pronunciacion>
+			<color_fondo>#e4d352</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>cerrar </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_84108830>
+		<Pulsador_54530180>
+			<fila>2</fila>
+			<columna>0</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>estar</pronunciacion>
+			<color_fondo>#e4d352</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>estar </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_54530180>
+		<Pulsador_39827793>
+			<fila>2</fila>
+			<columna>1</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>beber</pronunciacion>
+			<color_fondo>#e4d352</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>beber </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_39827793>
+		<Pulsador_32886553>
+			<fila>2</fila>
+			<columna>2</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>levantar</pronunciacion>
+			<color_fondo>#e4d352</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>levantar </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_32886553>
+		<Pulsador_94393331>
+			<fila>2</fila>
+			<columna>3</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>leer</pronunciacion>
+			<color_fondo>#e4d352</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>leer </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_94393331>
+		<Pulsador_36305407>
+			<fila>2</fila>
+			<columna>4</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>necesitar</pronunciacion>
+			<color_fondo>#e4d352</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>necesitar </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_36305407>
+		<Pulsador_28430591>
+			<fila>2</fila>
+			<columna>5</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>mirar</pronunciacion>
+			<color_fondo>#e4d352</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>mirar </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_28430591>
+		<Pulsador_947781>
+			<fila>3</fila>
+			<columna>0</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>limpiar</pronunciacion>
+			<color_fondo>#e4d352</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>limpiar </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_947781>
+		<Pulsador_50578242>
+			<fila>3</fila>
+			<columna>1</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>coger</pronunciacion>
+			<color_fondo>#e4d352</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>coger </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_50578242>
+		<Pulsador_22537327>
+			<fila>3</fila>
+			<columna>2</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>encencer</pronunciacion>
+			<color_fondo>#e4d352</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>encender </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_22537327>
+		<Pulsador_70033528>
+			<fila>3</fila>
+			<columna>3</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>apagar</pronunciacion>
+			<color_fondo>#e4d352</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>apagar </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_70033528>
+		<Pulsador_81952494>
+			<fila>3</fila>
+			<columna>4</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>subir</pronunciacion>
+			<color_fondo>#e4d352</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>subir </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_81952494>
+		<Pulsador_68749188>
+			<fila>3</fila>
+			<columna>5</columna>
+			<sonido></sonido>
+			<imagen></imagen>
+			<tipo_letra>Sans  </tipo_letra>
+			<size_letra>14</size_letra>
+			<escalado_imagen>2</escalado_imagen>
+			<pronunciacion>bajar</pronunciacion>
+			<color_fondo>#e4d352</color_fondo>
+			<color_letra>#000000</color_letra>
+			<nombre>bajar </nombre>
+			<enlace_a_mosaico></enlace_a_mosaico>
+		</Pulsador_68749188>
+	</tabla_botones>
+</mosaico>
+
