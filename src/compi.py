@@ -644,7 +644,8 @@ class gui:
                 if m.nombre():
                     pos = self.notebook.append_page(m,label)
                     self.opened_mos.insert(pos, mos)
-            self.notebook.set_current_page(pos)
+            if pos:
+                self.notebook.set_current_page(pos)
         elif response == gtk.RESPONSE_CANCEL:
             pass
         else:
