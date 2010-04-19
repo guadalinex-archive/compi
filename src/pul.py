@@ -614,9 +614,6 @@ class Propiedades:
         elif action == "play":
             self.campo.set_text(_("Sonido"))
             self.entry.set_text(self.pulsador.config["sonido"])
-            self.campo.set_sensitive(player.pymedia_installed)
-            self.entry.set_sensitive(player.pymedia_installed)
-            self.ex.set_sensitive(player.pymedia_installed)
             self.ex.show()
         elif action == "close" or action == "exit" or action == "fullscreen" \
             or action == "eraseall" or action == "eraselast" \

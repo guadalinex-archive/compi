@@ -4,6 +4,7 @@
 import pygtk
 pygtk.require('2.0')
 import gtk
+gtk.gdk.threads_init()
 import gobject
 import time
 import os
@@ -46,7 +47,7 @@ def aviso(msg, timeout = None):
     logoad = gtk.Image()
     iconad = aviso.render_icon(gtk.STOCK_DIALOG_WARNING, 1)
     aviso.set_icon(iconad)
-    aviso.vbox.pack_start(mensaje)
+    aviso.vbox.pack_start(mensaje, True, True, 50)
     aviso.show_all()
     if timeout:
         t = Timer(timeout, aviso.destroy)
@@ -76,7 +77,7 @@ class Base:
         self.window = gtk.Window()
         self.window.set_icon_from_file("/usr/share/pixmaps/mosaico.png")
         self.window.set_title(name + " " + version)
-        self.window.set_default_size(800,480)
+        self.window.set_default_size(800,432)
         self.window.set_border_width(1)
         #self.window.move(50,50)
         self.window.connect("delete_event", self.salir)
@@ -100,7 +101,7 @@ class Base:
 
         # Create actions
         actiongroup.add_actions([('Quit', gtk.STOCK_QUIT, _('Salir'), None,
-                    'Quit the Program', self.salir),
+                    'Cerrar el programa', self.salir),
                     
                     ('File', None, _('_Archivo')),
                     
@@ -931,8 +932,8 @@ def run_gui():
     s = config.player.connect()
     if s:
         compigtk = Base()
-        compigtk.main()
         gobject.idle_add(config.player.read_text, _("Bienvenido al comunicador pictográfico de Guadalinex"))
+        compigtk.main()
         s.close()
         config.player.stop_festival()
         print "Eliminando archivos temporales..."
