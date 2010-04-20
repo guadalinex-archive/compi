@@ -731,7 +731,7 @@ class Base:
             vbox2.pack_start(gtk.Label(mos.config["nombre"]))
             vbox2.pack_start(gtk.Label(str(mos.config["filas"]) + 'x' + str(mos.config["columnas"])))
             vbox2.pack_start(gtk.Label(str(mos.config["espaciado"]) + 'px'))
-            vbox2.pack_start(gtk.Label(time.strftime("%A, %d %b %Y %H:%M:%S", mos.config["fecha_creacion"])))
+            vbox2.pack_start(gtk.Label(str(mos.config["fecha_creacion"])))
             vbox2.pack_start(gtk.Label(mos.config["ruta_guardado"]))
             vbox2.pack_start(gtk.Label(str(mos.config["modificable"])))
             hbox.pack_start(vbox1)

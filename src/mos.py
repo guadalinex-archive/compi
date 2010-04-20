@@ -36,7 +36,7 @@ class Mosaico(gtk.Frame):
         self.config={"filas":filas, \
             "columnas":columnas, \
             "nombre":nombre, \
-            "fecha_creacion":time.gmtime(), \
+            "fecha_creacion":time.strftime("%a, %d %b %Y %H:%M:%S", time.gmtime()), \
             "tabla_botones":[], \
             "modificable":True, \
             "solo_lectura":False, \
@@ -215,7 +215,10 @@ class Mosaico(gtk.Frame):
                 elif k == "espaciado" or k == "filas" or k == "columnas":
                     self.config[str(k)] = int(v)
                 elif k == "fecha_creacion":
-                    self.config[str(k)] = time.gmtime(timegm(eval(str(v))))
+                    try:
+                        self.config[str(k)] = time.strftime("%a, %d %b %Y %H:%M:%S", time.gmtime(timegm(eval(str(v)))))
+                    except:
+                        self.config[str(k)] = str(v)
                 else:
                     if v == "True":
                         v = True
