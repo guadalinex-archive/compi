@@ -29,5 +29,5 @@ setup(  name             = "compi",
                     ('/usr/share/pixmaps/', tuple(glob.glob("images/*.png")))],
      )
 
-
-
+os.chmod('/usr/bin/compi', 0755)
+os.chmod('/usr/share/applications/compi.desktop', 0644)

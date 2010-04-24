@@ -47,7 +47,7 @@ class Pulsador (gtk.Button):
         if tipo == "contacto":
             self.default_image = "/usr/share/pixmaps/login-photo.png"
         else:
-            self.default_image = ""
+            self.default_image = "/usr/share/pixmaps/edit.png"
         self.player = config.player
         self.ispreview = False
         self.ismini = False
@@ -105,7 +105,7 @@ class Pulsador (gtk.Button):
             self.imagen.set_from_pixbuf(pixbuf)
             self.show_all()
         else:
-            self.show_all()
+            self.imagen.clear()
             self.imagen.hide()
         
     def modificar_boton(self, nombre=None, pronunciacion=None, sonido=None, tipo_letra=None, color_letra=None, tamano_letra=None, color_fondo=None, imagen="",  enlace_a_mosaico=None, escalado=0, mail=None, action=None):
@@ -141,16 +141,19 @@ class Pulsador (gtk.Button):
         path = config.temp_dir
         self.ident = ident
         for k, v in s.iteritems():
-            if k == "imagen" and v:
-                try:
-                    file = str(os.path.join(path, v["file"]))
-                    f = open(file,"w")
-                    f.write(base64.b64decode(v["data"]))
-                    f.close()
-                    self.config["imagen"] = file
-                except:
-                    print "Fallo al recuperar la imagen"
-                    self.config["imagen"] = ""
+            if k == "imagen":
+                if v:
+                    try:
+                        file = str(os.path.join(path, v["file"]))
+                        f = open(file,"w")
+                        f.write(base64.b64decode(v["data"]))
+                        f.close()
+                        self.config["imagen"] = file
+                    except:
+                        print "Fallo al recuperar la imagen"
+                        self.config["imagen"] = ""
+                else:
+                     self.config["imagen"] = ""
             elif k == "sonido" and v:
                 try:
                     file = str(os.path.join(path, v["file"]))
@@ -245,31 +248,73 @@ class Pulsador (gtk.Button):
         if event.type == gtk.gdk.BUTTON_PRESS:
             if event.button==1:
                 eval("self.%s()" % widget.config["action"])
-            elif event.button==2:
-                #print "Click con el botón central"
-                # copiar boton
-                if widget.ismodificable and not widget.ispreview and not config.base.session["fullscreen"]:
-                    global copy
-                    if copy:
-                        #print "Intercambiar con Pulsador en memoria"
-                        if copy.tipo == widget.tipo:
-                            t = widget.config
-                            widget.config = copy.config
-                            copy.config = t
-                            widget.aplicar_formato()
-                        copy.set_relief(gtk.RELIEF_NORMAL)
-                        copy.aplicar_formato()
-                        copy = None
-                    else:
-                        #print "Almacenar Pulsador en memoria"
-                        copy = widget
-                        copy.set_relief(gtk.RELIEF_NONE)
             elif event.button==3:
                 #print "Click con el botón derecho"
                 if widget.ismodificable and not widget.ispreview and not config.base.session["fullscreen"]:
                     #print "Editar Pulsador"
                     # mostrar ventana edición
-                    p = Propiedades(widget)
+                    contextmenu = gtk.Menu()
+                    editar = gtk.MenuItem(_("Editar"))
+                    copiar = gtk.MenuItem(_("Copiar"))
+                    pegar = gtk.MenuItem(_("Pegar"))
+                    mover = gtk.MenuItem(_("Mover"))
+                    limpiar = gtk.MenuItem(_("Limpiar"))
+                    
+                    editar.connect("activate", self.edit)
+                    limpiar.connect("activate", self.clean)
+                    copiar.connect("activate", self.copy)
+                    pegar.connect("activate", self.paste)
+                    mover.connect("activate", self.move)
+                    
+                    contextmenu.append(editar)
+                    global copy
+                    contextmenu.append(copiar)
+                    if copy:
+                        contextmenu.append(mover)
+                        contextmenu.append(pegar)
+                    contextmenu.append(limpiar)
+                    
+                    contextmenu.show_all()
+                    contextmenu.popup(None, None, None, event.button, 0)
+                    
+                    
+                    
+
+    def edit(self, widget):
+        p = Propiedades(self)
+
+    def clean(self, widget):
+        b = Pulsador()
+        self.config = b.config
+        self.aplicar_formato()
+
+    def move(self, widget):
+        global copy
+        if copy and copy.tipo == self.tipo:
+            t = self.config
+            self.config = copy.config
+            copy.config = t
+            self.aplicar_formato()
+            copy.set_relief(gtk.RELIEF_NORMAL)
+            copy.aplicar_formato()
+            copy = None
+        
+
+    def copy(self, widget):
+        #print "Almacenar Pulsador en memoria"
+        global copy
+        if copy:
+            copy.set_relief(gtk.RELIEF_NORMAL)
+        copy = self
+        copy.set_relief(gtk.RELIEF_NONE)
+              
+    def paste(self, widget):
+        global copy
+        if copy and copy.tipo == self.tipo:
+            self.config = copy.config
+            self.aplicar_formato()
+            copy.set_relief(gtk.RELIEF_NORMAL)
+            copy = None
 
     def clone(self):
         b = Pulsador()
