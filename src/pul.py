@@ -548,7 +548,7 @@ class Propiedades:
         self.pulsador_original = p
         self.pulsador = p.preview()
         self.window = gtk.Dialog(_("Propiedades del Pulsador"), None,
-         gtk.DIALOG_MODAL, (gtk.STOCK_OK, gtk.RESPONSE_ACCEPT, gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL))
+         gtk.DIALOG_MODAL, (gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL, gtk.STOCK_OK, gtk.RESPONSE_ACCEPT))
         self.window.set_has_separator(True)
         
         contenedor=gtk.Table(5, 4, False)

@@ -88,7 +88,7 @@ class Mosaico(gtk.Frame):
 
     
 
-    def nombre(self):
+    def get_nombre(self):
         """
         Devuelve el nombre del mosaico
         """
@@ -272,7 +272,7 @@ class Mosaico(gtk.Frame):
         """
         window = gtk.Dialog(_("Formato"), parent,
          gtk.DIALOG_MODAL | gtk.DIALOG_DESTROY_WITH_PARENT,
-         (gtk.STOCK_OK, gtk.RESPONSE_ACCEPT, gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL))
+         (gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL, gtk.STOCK_OK, gtk.RESPONSE_ACCEPT))
         window.set_has_separator(True)
         
         logoad = gtk.Image()
@@ -303,7 +303,7 @@ class Mosaico(gtk.Frame):
         else:
             lang.set_active(default)
         nombre = gtk.Entry()
-        nombre.set_text(self.nombre())
+        nombre.set_text(self.config["nombre"])
         fontbutton = gtk.FontButton("%s %d" %(config.global_config["tipo_letra"], config.global_config["size_letra"]))
         fontbutton.set_use_font(True)
         fontbutton.set_title('Fuente')

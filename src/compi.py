@@ -380,7 +380,7 @@ class Base:
         """
         mos = Mosaico(self.nombre.get_text(), self.filas.get_value_as_int(),
          self.columnas.get_value_as_int())
-        label = gtk.Label(mos.nombre())
+        label = gtk.Label(mos.get_nombre())
         pos = self.notebook.append_page(mos,label)
         #self.opened_mos.insert(pos, mos)
         self.notebook.set_current_page(pos)
@@ -767,8 +767,8 @@ class Base:
                 pos = self.opened_mos.index(mos)
             else:
                 m = Mosaico("", 1, 1, mos, padre)
-                label = gtk.Label(m.nombre())
-                if m.nombre():
+                label = gtk.Label(m.get_nombre())
+                if m.get_nombre():
                     pos = self.notebook.append_page(m,label)
                     self.opened_mos.insert(pos, mos)
             self.notebook.set_current_page(pos)
@@ -880,6 +880,7 @@ class Base:
         if x >= 0:
             mos = self.notebook.get_nth_page(x)
             mos.formato(self.window)
+            self.notebook.set_tab_label_text(mos, mos.get_nombre())
 
     def about(self, widget):
         """
