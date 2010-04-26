@@ -70,7 +70,7 @@ class Pulsador (gtk.Button):
         }
         self.config = self.default_config
         self.tooltips = gtk.Tooltip()
-        self.tooltips.set_text(_("Clic izquierdo: ")+self.actions[self.config["action"]]+"\n"+_("Clic derecho: Editar pulsador")+"\n"+_("Clic central:   Cortar y pegar"))
+        self.tooltips.set_text(_("Clic izquierdo: ")+self.actions[self.config["action"]]+"\n"+_("Clic derecho: Editar pulsador")+"\n")
         self.imagen = gtk.Image()
         self.titulo = gtk.Label("")
         self.titulo.set_justify(gtk.JUSTIFY_CENTER)
@@ -209,16 +209,16 @@ class Pulsador (gtk.Button):
                          config.global_config["level_zlib"])
                     else:
                         b64 = base64.b64encode(audio.read())
+                    audio.close()
                     p += tab + "\t<%s>\n" % k
                     p += tab + "\t\t<file>%s</file>\n" % f
                     p += tab + "\t\t<coding>%s</coding>\n" % "base64"
                     p += tab + "\t\t<zlib-compressed>%s</zlib-compressed>\n" % compress
                     p += tab + "\t\t<data>%s</data>\n" % b64
                     p += tab + "\t</%s>\n" % k
-
-                    audio.close()
                 except:
                     pass
+                    
             elif k == "imagen" and v != self.default_image:
                 # convertir imagen v a texto
                 try:
@@ -229,15 +229,16 @@ class Pulsador (gtk.Button):
                          config.global_config["level_zlib"])
                     else:
                         b64 = base64.b64encode(picture.read())
+                    picture.close()
                     p += tab + "\t<%s>\n" % k
                     p += tab + "\t\t<file>%s</file>\n" % f
                     p += tab + "\t\t<coding>%s</coding>\n" % "base64"
                     p += tab + "\t\t<zlib-compressed>%s</zlib-compressed>\n" % compress
                     p += tab + "\t\t<data>%s</data>\n" % b64
-                    p += tab + "\t</%s>\n" % k
-                    picture.close()
+                    p += tab + "\t</%s>\n" % k 
                 except:
-                    pass
+                    r += tab + "\t<%s>%s</%s>\n" % (k, v , k)
+                    
             else:
                 r += tab + "\t<%s>%s</%s>\n" % (k, v , k)
         r += p + tab + "</Pulsador_%s>\n" % (self.ident)
@@ -247,7 +248,10 @@ class Pulsador (gtk.Button):
         # global base
         if event.type == gtk.gdk.BUTTON_PRESS:
             if event.button==1:
-                eval("self.%s()" % widget.config["action"])
+                if not self.tipo == "contacto" and self.config["imagen"] == self.default_image:
+                    self.edit(None)
+                else:
+                    eval("self.%s()" % widget.config["action"])
             elif event.button==3:
                 #print "Click con el botón derecho"
                 if widget.ismodificable and not widget.ispreview and not config.base.session["fullscreen"]:
@@ -564,7 +568,8 @@ class Propiedades:
         
        
         self.entryimage = gtk.Entry()
-        self.entryimage.set_text(p.config["imagen"])
+        if not p.config["imagen"] == p.default_image and not p.tipo == "contacto":
+            self.entryimage.set_text(p.config["imagen"])
         
         liststore = gtk.ListStore(str, str)
         self.combobox = gtk.ComboBox(liststore) 

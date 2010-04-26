@@ -232,11 +232,10 @@ class Mosaico(gtk.Frame):
         Almacena la información del objeto en un archivo
         """
         try:
+            save = self.to_string()
             if ruta:
                 self.config["ruta_guardado"] = ruta
             s = open(self.config["ruta_guardado"],'w')
-            save = self.to_string()
-
             #if default_config["use_zlib"]:
             #    save = zlib.compress(save, default_config["level_zlib"])
             s.write(save)
@@ -279,12 +278,15 @@ class Mosaico(gtk.Frame):
         logoad = gtk.Image()
         iconad = window.render_icon(gtk.STOCK_PREFERENCES, 1)
         nombreL=gtk.Label(_("Nombre"))
-        fuente=gtk.Label(_("Fuente"))
-        imagen=gtk.Label(_("Tamaño de la imagen"))
+        fuente=gtk.CheckButton(_("Fuente"))
+        imagen=gtk.CheckButton(_("Tamaño de la imagen"))
         espaciadoL=gtk.Label(_("Espaciado"))
         idioma=gtk.Label(_("Idioma"))
-        fondo=gtk.Label(_("Color de fondo"))
-        texto=gtk.Label(_("Color del texto"))
+        fondo=gtk.CheckButton(_("Color de fondo"))
+        texto=gtk.CheckButton(_("Color del texto"))
+        update_all = gtk.Label("")
+        update_all.set_markup("<i>"+_("Seleccione los campos que desee actualizar")+"</i>")
+        update_all.set_justify(gtk.JUSTIFY_CENTER)
         lang = gtk.combo_box_new_text()
         i = 0
         active = 0
@@ -315,8 +317,10 @@ class Mosaico(gtk.Frame):
         espaciado = gtk.SpinButton(adj2, 1, 0)
         espaciado.set_wrap(True)
 
-        aspecto = gtk.VBox(False, 5)
-        values = gtk.Frame(_("Formato del mosaico"))
+        aspecto1 = gtk.VBox(False, 5)
+        aspecto2 = gtk.VBox(False, 5)
+        mosaic = gtk.Frame(_("Formato del mosaico"))
+        puls = gtk.Frame(_("Formato de los pulsadores"))
 
         v0 = gtk.HBox()
         v1 = gtk.HBox()
@@ -328,33 +332,38 @@ class Mosaico(gtk.Frame):
 
         v0.pack_start(nombreL, False, False, 2)
         v0.pack_end(nombre, True, True, 2)
-        v1.pack_start(fuente, False, False, 2)
-        v1.pack_end(fontbutton, True, True, 2)
-        v2.pack_start(texto, False, False, 2)
-        v2.pack_start(colorfont, False, False, 2)
-        v2.pack_end(colorback, False, False, 2)
-        v2.pack_end(fondo, False, False, 2)
+        v3.pack_start(fuente, False, False, 2)
+        v3.pack_end(fontbutton, True, True, 2)
+        v5.pack_start(texto, False, False, 2)
+        v5.pack_start(colorfont, False, False, 2)
+        v5.pack_end(colorback, False, False, 2)
+        v5.pack_end(fondo, False, False, 2)
         v4.pack_start(imagen, False, False, 2)
         v4.pack_start(hscale, True, True, 2)
-        v5.pack_start(espaciadoL, False, False, 2)
-        v5.pack_start(espaciado, False, False, 2)
-        v6.pack_start(idioma, False, False, 2)
-        v6.pack_end(lang, True, True, 2)
+        v2.pack_start(espaciadoL, False, False, 2)
+        v2.pack_start(espaciado, False, False, 2)
+        v1.pack_start(idioma, False, False, 2)
+        v1.pack_end(lang, True, True, 2)
+        v6.pack_start(update_all, True, True, 2)
 
-        aspecto.pack_start(v0, False, False, 1)
-        aspecto.pack_start(v1, False, False, 1)
-        aspecto.pack_start(v6, False, False, 1)
-        aspecto.pack_start(v2, False, False, 1)
-        aspecto.pack_start(v3, False, False, 1)
-        aspecto.pack_start(v4, False, False, 1)
-        aspecto.pack_start(v5, False, False, 1)
+        aspecto1.pack_start(v0, False, False, 1)
+        aspecto1.pack_start(v1, False, False, 1)
+        aspecto1.pack_start(v2, False, False, 1)
+        aspecto2.pack_start(v3, False, False, 1)
+        aspecto2.pack_start(v4, False, False, 1)
+        aspecto2.pack_start(v5, False, False, 1)
+        aspecto2.pack_start(v6, False, False, 1)
         #aspecto.pack_start(v0, False, False, 1)
 
-        values.add(aspecto)
-        values.show_all()
+        mosaic.add(aspecto1)
+        mosaic.show_all()
+
+        puls.add(aspecto2)
+        puls.show_all()
 
         window.move(150,150)
-        window.vbox.pack_start(values, True, True, 10)
+        window.vbox.pack_start(mosaic, True, True, 10)
+        window.vbox.pack_start(puls, True, True, 10)
 
         response = window.run()
         if response == gtk.RESPONSE_ACCEPT:
@@ -369,12 +378,14 @@ class Mosaico(gtk.Frame):
             self.ajustar_espacio()
             for fila in self.config["tabla_botones"]:
                 for p in fila:
-                    p.modificar_boton(tipo_letra = fontbutton.get_font_name()[:-2],
-                                        color_letra=cfont,
-                                        tamano_letra=int(fontbutton.get_font_name()[-2:]),
-                                        color_fondo=cbackg,
-                                        imagen = p.config["imagen"],
-                                        escalado=int(hscale.get_value()))
+                    if fuente.get_active():
+                        p.modificar_boton(imagen = p.config["imagen"], tipo_letra = fontbutton.get_font_name()[:-2], tamano_letra=int(fontbutton.get_font_name()[-2:]))
+                    if imagen.get_active():
+                        p.modificar_boton(imagen = p.config["imagen"], escalado=int(hscale.get_value()))
+                    if texto.get_active():
+                        p.modificar_boton(imagen = p.config["imagen"], color_letra=cfont)
+                    if fondo.get_active():
+                        p.modificar_boton(imagen = p.config["imagen"], color_fondo=cbackg)
                     p.show_all()
             self.show_all()
         elif response == gtk.RESPONSE_CANCEL:
