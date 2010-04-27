@@ -11,6 +11,7 @@ src/gconf_prefs.py
 src/mos.py
 src/player.py
 src/pul.py
+src/utils.py
 compi.desktop
 images/mosaico.png
 images/close.png

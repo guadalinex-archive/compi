@@ -19,6 +19,7 @@ from mos import Mosaico
 from compi_conf import Opciones
 from player import Player
 from shutil import rmtree
+from utils import aviso_temp
 
 
 # Multi-lingual support
@@ -35,26 +36,8 @@ festival_port = config.festival_port
 
 
 
-def aviso(msg, timeout = None):
-    """
-    Función auxiliar para mostrar mensajes de aviso
-    """
-    aviso = gtk.Dialog(_('Aviso'), None, gtk.DIALOG_DESTROY_WITH_PARENT,
-         (gtk.STOCK_OK, gtk.RESPONSE_CLOSE))
-    mensaje = gtk.Label(msg)
-    mensaje.set_line_wrap(True)
-    mensaje.set_max_width_chars(80)
-    logoad = gtk.Image()
-    iconad = aviso.render_icon(gtk.STOCK_DIALOG_WARNING, 1)
-    aviso.set_icon(iconad)
-    aviso.vbox.pack_start(mensaje, True, True, 50)
-    aviso.show_all()
-    if timeout:
-        t = Timer(timeout, aviso.destroy)
-        t.start()
-    aviso.run()
-    aviso.destroy()
 
+    
 
 class Base:
     """
@@ -306,6 +289,7 @@ class Base:
             last = gconf_prefs.AutoPrefs('/apps/compi/last_session/', self.session)
             print "Guardando session"
             last.gconf_save()
+        self.window.destroy()
         gtk.main_quit()
 
     def pantalla_completa(self, widget):
@@ -862,7 +846,7 @@ class Base:
         """
         contact_mos_path = os.path.join(os.path.expanduser('~'),".contactos.mos")
         if not os.path.exists(contact_mos_path):
-            aviso(_(u"No se ha encontrado contactos previamente almacenados. Edite el mosaico que se abrirá a continuación y no olvide\nguardar los cambios."))
+            aviso_temp(_(u"No se ha encontrado contactos previamente almacenados. Edite el mosaico que se abrirá a continuación y no olvide\nguardar los cambios."))
             
         mos = Mosaico("*Contactos*", 3,  3, contact_mos_path)
         label = gtk.Label(_("Contactos"))
@@ -929,9 +913,13 @@ if __name__ == "__main__":
 def run_gui():
     config.player = Player(host, festival_port)
     config.player.run_festival()
-    aviso(_("Iniciando el motor de voces. Espere por favor."), 5)
-    s = config.player.connect()
-    if s:
+    av = aviso_temp(_("Iniciando el motor de voces. Espere por favor."), 5)
+    for i in range(3):
+        s = config.player.connect()
+        if s:
+            break
+        time.sleep(1)
+    if s and not av.response == gtk.RESPONSE_CLOSE:
         compigtk = Base()
         gobject.idle_add(config.player.read_text, _("Bienvenido al comunicador pictográfico de Guadalinex"))
         compigtk.main()
@@ -944,6 +932,8 @@ def run_gui():
             print "Falló"
         else:
             print "OK"
+    else:
+        config.player.stop_festival()
 
 
 

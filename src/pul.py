@@ -10,6 +10,7 @@ import config
 from PIL import Image
 from random import randint
 import player
+from utils import aviso_temp
 
 _ = config._
 
@@ -467,39 +468,16 @@ class Pulsador (gtk.Button):
         smtpserver = config.global_config["smtpserver"]
         tls = config.global_config["tls"]
         if sender and password and smtpserver:
-            aviso = gtk.Dialog(_('Aviso'), None, gtk.DIALOG_DESTROY_WITH_PARENT,
-             (gtk.STOCK_CANCEL, gtk.RESPONSE_CLOSE))
-            mensaje = gtk.Label(_("El siguiente mensaje se enviará automáticamente en 5 segundos"))
-            
-            de = gtk.Label(_("DE:")+sender)
-            de.set_alignment(0, 0)
-            para = gtk.Label(_("PARA:")+receiver)
-            para.set_alignment(0, 0)
-            asunto = gtk.Label(_("ASUNTO:")+header)
-            asunto.set_alignment(0, 0)
-            contenido = gtk.Label(text)
-            contenido.set_alignment(0, 0)
-            
-            logoad = gtk.Image()
-            iconad = aviso.render_icon(gtk.STOCK_DIALOG_WARNING, 1)
-            aviso.set_icon(iconad)
-            
-            aviso.vbox.pack_start(mensaje)
-            aviso.vbox.pack_start(gtk.HSeparator())
-            aviso.vbox.pack_start(de)
-            aviso.vbox.pack_start(para)
-            aviso.vbox.pack_start(asunto)
-            aviso.vbox.pack_start(contenido)
-            aviso.show_all()
-            
-            timer = gobject.timeout_add(5000, aviso.destroy)
-            response = aviso.run()
+            mensaje = _("El siguiente mensaje se enviará automáticamente en 5 segundos")
+            mensaje += "\n" + _("DE:") + sender
+            mensaje += "\n" + _("PARA:")+receiver
+            mensaje += "\n" + _("ASUNTO:")+header
+            mensaje += "\n" + text
+            av = aviso_temp(mensaje, 5)
+            response = av.response
             if response == gtk.RESPONSE_CLOSE:
-                gobject.source_remove(timer)
-                aviso.destroy()
                 return 0
             else:
-                aviso.destroy()
                 import smtplib
                 from email.MIMEText import MIMEText
                 from email.Header import Header
@@ -533,13 +511,8 @@ class Pulsador (gtk.Button):
                     server.quit()
                     return 1
         else:
-            aviso = gtk.Dialog(_('Aviso'), None, gtk.DIALOG_DESTROY_WITH_PARENT,
-             (gtk.STOCK_CANCEL, gtk.RESPONSE_CLOSE))
-            mensaje = gtk.Label(_(u"No ha configurado aún las opciones de correo saliente."))
-            aviso.vbox.pack_start(mensaje)
-            aviso.run()
-            aviso.show_all()
-            aviso.destroy()
+            aviso_temp(_(u"No ha configurado aún las opciones de correo saliente."))
+            
 
 
 class Propiedades:

@@ -24,7 +24,6 @@ class Player:
             self.fest = subprocess.Popen(["/usr/bin/festival", "--server"])
         except:
             print "Error al inicar el servidor de voces"
-            return 1
         
     def stop_festival(self):
         try:
@@ -48,12 +47,13 @@ class Player:
             print "No fue posible hacer la petición al servidor de voces"
             
     def connect(self):
-        self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         print "Conectando con el servidor festival (%s:%s)..." % (self.host, self.port)
+        self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         try:
             self.socket.connect((self.host, self.port))
         except:
             print "Fallo al conectar con el servidor de voz"
+            self.socket = None
         return self.socket
         
     def play_audio(self, file):
