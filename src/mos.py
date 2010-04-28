@@ -103,7 +103,7 @@ class Mosaico(gtk.Frame):
         f, c = self.config["filas"], self.config["columnas"]
         self.rejilla.resize(f, c)
         for i in range (self.config["filas"]):
-            p= Pulsador()
+            p= Pulsador(None, self)
             self.config["tabla_botones"][i].append(p)
             self.rejilla.set_row_spacing(i, self.config["espaciado"])
             self.rejilla.attach(p, j, j+1, i, i+1,
@@ -123,7 +123,7 @@ class Mosaico(gtk.Frame):
         f, c = self.config["filas"], self.config["columnas"]
         self.rejilla.resize(f, c)
         for j in range (self.config["columnas"]):
-            p= Pulsador()
+            p= Pulsador(None, self)
             self.config["tabla_botones"][i].append(p)
             self.rejilla.attach(p, j, j+1, i, i+1,
             gtk.SHRINK|gtk.EXPAND|gtk.FILL,
@@ -207,7 +207,7 @@ class Mosaico(gtk.Frame):
             for k, v in dic.iteritems():
                 if k == "tabla_botones":
                     for ident, config in v.iteritems():
-                        p = Pulsador(tipo, os.path.split(self.config["ruta_guardado"])[0])
+                        p = Pulsador(tipo, self)
                         i, j = p.from_string(ident.replace("Pulsador_", ""), config)
                         self.config["tabla_botones"][i][j] = p
                 elif k == "ruta_guardado":
@@ -232,6 +232,7 @@ class Mosaico(gtk.Frame):
         Almacena la información del objeto en un archivo
         """
         try:
+            self.config["modificado"] = False
             save = self.to_string()
             if ruta:
                 self.config["ruta_guardado"] = ruta
@@ -242,6 +243,7 @@ class Mosaico(gtk.Frame):
             s.close()
             #print save
         except:
+            self.config["modificado"] = True
             print "Fallo al guardar el mosaico"
 
     def to_string(self):

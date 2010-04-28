@@ -42,6 +42,8 @@ default_config = {"filas":3, \
     "aud_dir": os.path.expanduser('~'), \
     "save_dir": os.path.expanduser('~'), \
     "mos_dir": os.path.expanduser('~'), \
+    "last_im_dir": "", \
+    "last_aud_dir": "", \
     "use_zlib":False, \
     "level_zlib":6, \
     "idioma":"spanish_1", \

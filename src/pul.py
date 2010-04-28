@@ -36,7 +36,7 @@ class Pulsador (gtk.Button):
     }
 
 
-    def __init__(self, tipo = None, path=None):
+    def __init__(self, tipo = None, parent=None):
         """
         Constructor de la clase
         """
@@ -53,7 +53,7 @@ class Pulsador (gtk.Button):
         self.ispreview = False
         self.ismini = False
         self.ismodificable = True
-        self.path = path
+        self.mosaico = parent
         
         self.default_config={
         "nombre":"", \
@@ -323,7 +323,7 @@ class Pulsador (gtk.Button):
 
     def clone(self):
         b = Pulsador()
-        b.config = self.config
+        b.config = self.config.copy()
         b.aplicar_formato()
         return b
 
@@ -416,9 +416,9 @@ class Pulsador (gtk.Button):
     def goto(self):
         if not (self.ispreview or self.ismini) and self.config["enlace_a_mosaico"]:
             try:
-                relative = os.path.join(self.path, os.path.split(self.config["enlace_a_mosaico"])[1])
+                relative = os.path.join(os.path.dirname(self.mosaico.config["ruta_guardado"]), os.path.basename(self.config["enlace_a_mosaico"]))
             except:
-                print "Error de redireccionamiento"
+                print "Error de redireccionamiento: %s" % relative
             else:
                 if os.path.exists(self.config["enlace_a_mosaico"]):
                     print "Abriendo mosaico %s..." % os.path.split(self.config["enlace_a_mosaico"])[1]
@@ -427,14 +427,8 @@ class Pulsador (gtk.Button):
                     print "Abriendo mosaico %s..." % os.path.split(relative)[1]
                     config.base.abrir(None, relative, config.base.get_current_opened())
                 else:
-                    aviso = gtk.Dialog(_('Aviso'), None, gtk.DIALOG_DESTROY_WITH_PARENT,
-                     (gtk.STOCK_CLOSE, gtk.RESPONSE_CLOSE))
-                    mensaje = gtk.Label(_("No se puede acceder al archivo ") + self.config["enlace_a_mosaico"] + _(". Revise que existe y que tiene permisos de lectura."))
-                    mensaje.set_line_wrap(True)
-                    aviso.vbox.pack_start(mensaje)
-                    aviso.show_all()
-                    aviso.run()
-                    aviso.destroy()
+                    mensaje = _("No se puede acceder al archivo ") + self.config["enlace_a_mosaico"] + _(". Revise que existe y que tiene permisos de lectura.")
+                    aviso_temp(mensaje, 5)
                 
     def volup(self):
         if not (self.ispreview or self.ismini):
@@ -675,6 +669,7 @@ class Propiedades:
         self.actualizar(None)
         self.pulsador_original.config = self.pulsador.config
         self.pulsador_original.aplicar_formato()
+        self.pulsador_originalmosaico.config["modificado"] = False
 
     def actualizar(self, event, o = None):
         model = self.combobox.get_model()
@@ -763,13 +758,19 @@ class Propiedades:
             preview = gtk.Image()
             chooser.set_preview_widget(preview)
             chooser.connect("update-preview", self.update_preview_cb, preview)
-            chooser.set_current_folder(config.global_config["im_dir"])
+            dir = config.global_config["im_dir"]
+            if config.global_config["last_im_dir"]:
+                dir = config.global_config["last_im_dir"]
+            chooser.set_current_folder(dir)
         elif tipo == "Audio":
             title=_("Seleccione un archivo de audio")
             chooser = gtk.FileChooserDialog(title,action=gtk.FILE_CHOOSER_ACTION_OPEN,
              buttons=(gtk.STOCK_CANCEL,gtk.RESPONSE_CANCEL,gtk.STOCK_OPEN,gtk.RESPONSE_OK))
             chooser.add_filter(audiofilter)
-            chooser.set_current_folder(config.global_config["aud_dir"])
+            dir = config.global_config["aud_dir"]
+            if config.global_config["last_aud_dir"]:
+                dir = config.global_config["last_aud_dir"]
+            chooser.set_current_folder(dir)
         elif tipo == "Mosaico":
             title=_("Seleccione una mosaico")
             chooser = gtk.FileChooserDialog(title,action=gtk.FILE_CHOOSER_ACTION_OPEN,
@@ -782,7 +783,10 @@ class Propiedades:
         if response == gtk.RESPONSE_OK:
             selected = chooser.get_filename()
             if tipo == "Image":
+                config.global_config["last_im_dir"] = os.path.dirname(selected)
                 selected = self.redimensionar(selected)
+            if tipo == "Audio":
+                config.global_config["last_aud_dir"] = os.path.dirname(selected)
         elif response == gtk.RESPONSE_CANCEL:
             pass
         else:

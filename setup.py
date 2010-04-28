@@ -3,11 +3,7 @@ from distutils.extension import Extension
 import os
 import glob
 
-examples_dir = '/usr/share/doc/compi/examples'
-try:
-    os.makedirs(examples_dir)
-except:
-    pass
+
     
 try:
     from src.config import version as compi_version
@@ -25,7 +21,6 @@ setup(  name             = "compi",
         data_files=[('/usr/bin/', ['compi']),
                     ('/usr/share/applications/', ['compi.desktop']),
                     ('/usr/share/compi/compi%s/translations/en/LC_MESSAGES' % compi_version.replace('.',''), ['translations/en/LC_MESSAGES/compi.mo']),
-                    (examples_dir, tuple(glob.glob("examples/*.mos"))),
                     ('/usr/share/pixmaps/', tuple(glob.glob("images/*.png")))],
      )
 

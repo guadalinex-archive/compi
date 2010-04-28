@@ -289,6 +289,8 @@ class Base:
             last = gconf_prefs.AutoPrefs('/apps/compi/last_session/', self.session)
             print "Guardando session"
             last.gconf_save()
+        while self.notebook.get_n_pages():
+            self.cerrar_mosaico(None)
         self.window.destroy()
         gtk.main_quit()
 
@@ -386,8 +388,6 @@ class Base:
         x = self.notebook.get_current_page()
         if x >= 0:
             self.notebook.get_nth_page(x).insertar_columna()
-        else:
-            self.prefered_mos.insertar_columna()
 
     def eliminar_fila(self, widget):
         """
@@ -404,8 +404,7 @@ class Base:
         x = self.notebook.get_current_page()
         if x >= 0:
             self.notebook.get_nth_page(x).borrar_columna()
-        else:
-            self.prefered_mos.borrar_columna()
+
 
     def retroceder(self):
         """
@@ -433,6 +432,16 @@ class Base:
         if x >= 0:
             mos = self.notebook.get_nth_page(x)
             padre = mos.padre
+            if mos.config["modificado"]:
+                question = gtk.Dialog(_('Aviso de modificación'),
+                     self.window, gtk.DIALOG_DESTROY_WITH_PARENT, 
+                     (gtk.STOCK_CANCEL, gtk.RESPONSE_CLOSE, gtk.STOCK_SAVE, gtk.RESPONSE_OK))
+                question.vbox.pack_start(gtk.Label(_("El mosaico actual ha sido modificado. ¿Desea guardar los cambios? ")), True, True, 30)
+                question.show_all()
+                r = question.run()
+                if r == gtk.RESPONSE_OK:
+                    self.guardar(None, mos)
+                question.destroy()
             self.notebook.remove_page(x)
             self.opened_mos.pop(x)
             del mos
@@ -502,6 +511,7 @@ class Base:
         Muestra/oculta el área de mensajes
         """
         self.session["show_out"] = not self.session["show_out"]
+        config.global_config["eco"] = not self.session["show_out"]
         if self.session["show_text"]:
             #self.acciones1.show()
             self.salida1.show()
@@ -536,15 +546,14 @@ class Base:
             #self.acciones1.hide()
             self.salida1.hide()
 
-    def guardar(self, widget):
+    def guardar(self, widget, mos = None):
         """
         Guarda los cambios efectuados en el mosaico actual
         """
-        x = self.notebook.get_current_page()
-        if x >= 0:
-            mos = self.notebook.get_nth_page(x)
-        else:
-            mos = self.prefered_mos
+        if not mos:
+            x = self.notebook.get_current_page()
+            if x >= 0:
+                mos = self.notebook.get_nth_page(x)
         #preguntar si guardar
         if mos.config["ruta_guardado"]:
             mos.guardar_mosaico()
@@ -657,7 +666,7 @@ class Base:
                 if os.path.exists(selected):
                     question = gtk.Dialog(_('Aviso de sobrescritura'),
                      self.window, gtk.DIALOG_DESTROY_WITH_PARENT, 
-                     (gtk.STOCK_SAVE, gtk.RESPONSE_OK , gtk.STOCK_CANCEL, gtk.RESPONSE_CLOSE))
+                     (gtk.STOCK_CANCEL, gtk.RESPONSE_CLOSE, gtk.STOCK_SAVE, gtk.RESPONSE_OK))
                     question.vbox.pack_start(gtk.Label(_("¿Desea sobreescribir el archivo existente? ")), True, True, 30)
                     question.show_all()
                     r = question.run()

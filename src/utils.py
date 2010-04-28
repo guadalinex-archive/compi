@@ -29,9 +29,10 @@ class aviso_temp:
         self.aviso.vbox.pack_start(self.countdown, True, True, 5)
         self.aviso.show_all()
         if self.timeout:
-            t = Timer(self.tick, self.update)
-            t.start()
+            self.t = Timer(self.tick, self.update)
+            self.t.start()
         self.response = self.aviso.run()
+        self.t.cancel()
         self.aviso.destroy()
 
     def update(self):
@@ -40,8 +41,8 @@ class aviso_temp:
             gtk.gdk.threads_enter()
             self.countdown.set_fraction(self.countdown.get_fraction() - self.fraction)
             gtk.gdk.threads_leave()
-            t = Timer(self.tick, self.update)
-            t.start()
+            self.t = Timer(self.tick, self.update)
+            self.t.start()
         else:
             gtk.gdk.threads_enter()
             self.aviso.response( gtk.RESPONSE_ACCEPT)
