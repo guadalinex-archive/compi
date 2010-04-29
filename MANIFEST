@@ -26,3 +26,5 @@ images/play.png
 images/send_by_mail.png
 images/voldown.png
 images/volup.png
+translations/en/LC_MESSAGES/compi.mo
+translations/en/LC_MESSAGES/en.po
