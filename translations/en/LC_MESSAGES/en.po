@@ -1,0 +1,715 @@
+# Spanish translations for compi package
+# Traducciones al español para el paquete compi.
+# Copyright (C) 2008 ORGANIZATION
+# fernando <fruiz@forja.guadalinex.org>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: compi 0.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-06-04 11:16+0200\n"
+"PO-Revision-Date: 2008-05-28 09:37+0200\n"
+"Last-Translator: fernando <fruiz@forja.guadalinex.org>\n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/compi_conf.py:21 src/config.py:92
+msgid "Preferencias"
+msgstr "Preferences"
+
+#: src/compi_conf.py:31 src/mos.py:279
+msgid "Fuente"
+msgstr "Font"
+
+#: src/compi_conf.py:32 src/mos.py:280
+msgid "Tamaño de la imagen"
+msgstr "Size of picture"
+
+#: src/compi_conf.py:33 src/mos.py:281
+msgid "Espaciado"
+msgstr "Space"
+
+#: src/compi_conf.py:34 src/mos.py:282
+msgid "Idioma"
+msgstr "Language"
+
+#: src/compi_conf.py:35 src/mos.py:283 src/pul.py:512
+msgid "Color de fondo"
+msgstr "Background color"
+
+#: src/compi_conf.py:36 src/mos.py:284 src/pul.py:513
+msgid "Color del texto"
+msgstr "Text color"
+
+#: src/compi_conf.py:37
+msgid "Mosaico inicial"
+msgstr "Home mosaic"
+
+#: src/compi_conf.py:40
+msgid "Sonidos"
+msgstr "Sounds"
+
+#: src/compi_conf.py:43 src/pul.py:716
+msgid "Imagenes"
+msgstr "Pictures"
+
+#: src/compi_conf.py:46 src/compi_conf.py:369 src/compi.py:657
+#: src/compi.py:752 src/pul.py:736
+msgid "Mosaicos"
+msgstr "Mosaics"
+
+#: src/compi_conf.py:49
+msgid "Guardado"
+msgstr "Save path"
+
+#: src/compi_conf.py:52
+msgid "Temporal"
+msgstr "Temp"
+
+#: src/compi_conf.py:76
+msgid "Cuenta"
+msgstr "Account"
+
+#: src/compi_conf.py:78
+msgid "Usuario"
+msgstr "User"
+
+#: src/compi_conf.py:80
+msgid "Contraseña"
+msgstr "Password"
+
+#: src/compi_conf.py:81
+msgid "Asunto de los mensajes enviados:"
+msgstr "Subject of sended mails:"
+
+#: src/compi_conf.py:82
+msgid "Proveedor:"
+msgstr "Supplier:"
+
+#: src/compi_conf.py:83
+msgid "Servidor SMTP"
+msgstr "SMTP Server"
+
+#: src/compi_conf.py:84
+msgid "TLS"
+msgstr "TLS"
+
+#: src/compi_conf.py:85
+msgid "Probar configuración"
+msgstr "Test configuration"
+
+#: src/compi_conf.py:115
+msgid "Rutas predeterminadas"
+msgstr "Default paths"
+
+#: src/compi_conf.py:140
+msgid "Almacenar imágenes como miniaturas"
+msgstr "Save pictures as thumbnails"
+
+#: src/compi_conf.py:141
+msgid "Habilitar compresión zlib al guardar"
+msgstr "Enable zlib compression"
+
+#: src/compi_conf.py:142
+msgid "Guardar sesión al salir"
+msgstr "Save session on exit"
+
+#: src/compi_conf.py:144
+msgid "Reproducir sonidos automáticamente"
+msgstr "Auto-play sounds"
+
+#: src/compi_conf.py:146
+msgid "Borrar mensaje al reproducir"
+msgstr "Clean message on play"
+
+#: src/compi_conf.py:148
+msgid "Añadir espacio tras cada palabra"
+msgstr "Add whitespace after every word"
+
+#: src/compi_conf.py:161
+msgid "General"
+msgstr "General"
+
+#: src/compi_conf.py:165
+msgid "Valores por defecto"
+msgstr "Default settings"
+
+#: src/compi_conf.py:194
+msgid "Aspecto"
+msgstr "Aspect"
+
+#: src/compi_conf.py:199
+msgid "Servidor de correo saliente"
+msgstr "Outgoing mail server"
+
+#: src/compi_conf.py:244
+msgid "Correo electrónico"
+msgstr "e-mail address"
+
+#: src/compi_conf.py:347
+msgid "Fallo de autenticación"
+msgstr "Authentication fail"
+
+#: src/compi_conf.py:349
+msgid "Configuración correcta"
+msgstr "Configuration OK"
+
+#: src/compi_conf.py:352
+msgid "Fallo al conectar al servidor SMTP: "
+msgstr "Couldn't connect to the SMTP server: "
+
+#: src/compi_conf.py:353 src/compi.py:40 src/pul.py:381 src/pul.py:422
+#: src/pul.py:488
+msgid "Aviso"
+msgstr "Warning"
+
+#: src/compi_conf.py:373
+msgid "Seleccione una carpeta"
+msgstr "Select folder"
+
+#: src/compi_conf.py:377
+msgid "Seleccione un mosaico"
+msgstr "Select a mosaic file"
+
+#: src/compi_conf.py:391 src/compi.py:687 src/compi.py:777 src/pul.py:770
+msgid "Opción desconocida"
+msgstr "Unknown option"
+
+#: src/compi.py:97 src/config.py:148
+msgid "Silenciar"
+msgstr "Mute"
+
+#: src/compi.py:98
+msgid "Silenciar sonido"
+msgstr "Mute"
+
+#: src/compi.py:99 src/pul.py:28
+msgid "Pantalla completa"
+msgstr "Fullscreen"
+
+#: src/compi.py:102 src/config.py:82 src/config.py:120
+msgid "Salir"
+msgstr "Quit"
+
+#: src/compi.py:105
+msgid "_Archivo"
+msgstr "_File"
+
+#: src/compi.py:107 src/config.py:73 src/config.py:106
+msgid "Nuevo"
+msgstr "New"
+
+#: src/compi.py:108
+msgid "Crear un nuevo mosaico"
+msgstr "New mosaic"
+
+#: src/compi.py:110 src/config.py:74 src/config.py:107
+msgid "Abrir"
+msgstr "Open"
+
+#: src/compi.py:111
+msgid "Abrir un mosaico"
+msgstr "Open mosaic"
+
+#: src/compi.py:113 src/config.py:75 src/config.py:108
+msgid "Guardar"
+msgstr "Save"
+
+#: src/compi.py:114
+msgid "Guardar los cambios del mosaico actual"
+msgstr "Enter the parameters of the new mosaic"
+
+#: src/compi.py:116 src/config.py:76 src/config.py:109
+msgid "Guardar como"
+msgstr "Save as"
+
+#: src/compi.py:117
+msgid "Guardar el mosaico actual"
+msgstr "Save the current mosaic"
+
+#: src/compi.py:119
+msgid "Imprimir"
+msgstr "Print"
+
+#: src/compi.py:121 src/config.py:78 src/config.py:116
+msgid "Propiedades"
+msgstr "Properties"
+
+#: src/compi.py:124
+msgid "Opciones"
+msgstr "Options"
+
+#: src/compi.py:127 src/config.py:80 src/config.py:118
+msgid "Cerrar"
+msgstr "Close"
+
+#: src/compi.py:128
+msgid "Cerrar mosaico actual"
+msgstr "Close mosaic"
+
+#: src/compi.py:130 src/mos.py:271
+msgid "Formato"
+msgstr "Format"
+
+#: src/compi.py:132
+msgid "Insertar fila"
+msgstr "Add row"
+
+#: src/compi.py:133
+msgid "Insertar una fila"
+msgstr "Add row"
+
+#: src/compi.py:135
+msgid "Insertar columna"
+msgstr "Add column"
+
+#: src/compi.py:136
+msgid "Insertar una columna"
+msgstr "Add column"
+
+#: src/compi.py:138 src/config.py:89 src/config.py:113
+msgid "Eliminar fila"
+msgstr "Delete row"
+
+#: src/compi.py:139
+msgid "Eliminar la última fila"
+msgstr "Delete row"
+
+#: src/compi.py:141 src/config.py:90 src/config.py:114
+msgid "Eliminar columna"
+msgstr "Delete column"
+
+#: src/compi.py:142
+msgid "Eliminar la última columna"
+msgstr "Delete column"
+
+#: src/compi.py:144 src/config.py:95
+msgid "Mensaje"
+msgstr "Output message"
+
+#: src/compi.py:145
+msgid "Visualizar el area de mensajes"
+msgstr "Show the message area"
+
+#: src/compi.py:147 src/config.py:97
+msgid "Barra de herramientas"
+msgstr "Toolbar"
+
+#: src/compi.py:148
+msgid "Visualizar la barra de herramientas"
+msgstr "Show the Toolbar"
+
+#: src/compi.py:150 src/config.py:96
+msgid "Cambiar vista"
+msgstr "Change view"
+
+#: src/compi.py:151
+msgid "Intercambiar modo texto/gráfico"
+msgstr "Switch mode"
+
+#: src/compi.py:153
+msgid "Herramientas"
+msgstr "Tools"
+
+#: src/compi.py:155
+msgid "Cambiar _modo"
+msgstr "Change view"
+
+#: src/compi.py:156
+msgid "Cambia entre los modos texto e imagen"
+msgstr "Switch betwen text and graphical mode"
+
+#: src/compi.py:159
+msgid "Leer _todo"
+msgstr "Read all"
+
+#: src/compi.py:160
+msgid "Leer el mensaje generado"
+msgstr "Read output"
+
+#: src/compi.py:162
+msgid "Leer _ultima"
+msgstr "Read last"
+
+#: src/compi.py:163
+msgid "Leer ultima palabra escrita"
+msgstr "Read the last written word"
+
+#: src/compi.py:165
+msgid "Leer _ultimo"
+msgstr "Read all"
+
+#: src/compi.py:166
+msgid "Leer el ultimo pulsado"
+msgstr "Play last"
+
+#: src/compi.py:168
+msgid "Borrar todo"
+msgstr "Erase last"
+
+#: src/compi.py:171
+msgid "Borrar caracter"
+msgstr "Erase char"
+
+#: src/compi.py:174
+msgid "Borrar palabra"
+msgstr "Erase word"
+
+#: src/compi.py:177
+msgid "Borrar _ultimo"
+msgstr "Erase last"
+
+#: src/compi.py:180 src/config.py:144
+msgid "Mosaico anterior"
+msgstr "Previous mosaic"
+
+#: src/compi.py:181
+msgid "Ir al mosaico anterior"
+msgstr "Go to the Previous mosaic"
+
+#: src/compi.py:183
+msgid "Enviar correo"
+msgstr "Send by e-mail"
+
+#: src/compi.py:184
+msgid "Enviar mensaje por correo electrónico"
+msgstr "Send output by e-mail "
+
+#: src/compi.py:186 src/config.py:151
+msgid "Mosaico siguiente"
+msgstr "Next mosaic"
+
+#: src/compi.py:187
+msgid "Ir al siguiente mosaico"
+msgstr "Go to the next mosaic"
+
+#: src/compi.py:189
+msgid "Ir al Inicio"
+msgstr "Go Home"
+
+#: src/compi.py:190
+msgid "Ir al inicio"
+msgstr " Go Home"
+
+#: src/compi.py:192
+msgid "_Ver"
+msgstr "_View"
+
+#: src/compi.py:194
+msgid "A_yuda"
+msgstr "_Help"
+
+#: src/compi.py:196
+msgid "_Editar"
+msgstr "_Edit"
+
+#: src/compi.py:198 src/config.py:101
+msgid "Pagina Web"
+msgstr "Web"
+
+#: src/compi.py:200 src/config.py:102
+msgid "Acerca de"
+msgstr "About"
+
+#: src/compi.py:201
+msgid "Información del programa"
+msgstr "Exit"
+
+#: src/compi.py:223
+msgid "Leer todo"
+msgstr "Read all"
+
+#: src/compi.py:225 src/pul.py:33
+msgid "Borrar último"
+msgstr "Erase last"
+
+#: src/compi.py:227
+msgid "Limpiar"
+msgstr "Clean"
+
+#: src/compi.py:244
+msgid "Modo texto"
+msgstr "Text mode"
+
+#: src/compi.py:259
+msgid "Modo gráfico"
+msgstr "Graphic mode"
+
+#: src/compi.py:331
+msgid "Nuevo Mosaico"
+msgstr "New mosaic"
+
+#: src/compi.py:335
+msgid "Introduzca los datos del nuevo mosaico"
+msgstr "Enter the parameters of the new mosaic"
+
+#: src/compi.py:338
+msgid "Nombre del mosaico: "
+msgstr "Name: "
+
+#: src/compi.py:340
+msgid "Nuevo mosaico"
+msgstr "New mosaic"
+
+#: src/compi.py:341
+msgid "Filas: "
+msgstr "Rows: "
+
+#: src/compi.py:345
+msgid "Columnas: "
+msgstr "Columns: "
+
+#: src/compi.py:660
+msgid "Guardar mosaico"
+msgstr "Save mosaic"
+
+#: src/compi.py:673
+msgid "Aviso de sobrescritura"
+msgstr "Overwriting warning"
+
+#: src/compi.py:676
+msgid "¿Desea sobreescribir el archivo existente? "
+msgstr "Do you want to overwrite the existing file? "
+
+#: src/compi.py:719
+msgid "Propiedades del mosaico"
+msgstr "Properies of the mosaic"
+
+#: src/compi.py:724
+msgid "Nombre: "
+msgstr "Name: "
+
+#: src/compi.py:725
+msgid "Dimensiones: "
+msgstr "Dimensions: "
+
+#: src/compi.py:726
+msgid "Espaciado: "
+msgstr "Space: "
+
+#: src/compi.py:727
+msgid "Fecha de creación: "
+msgstr "Date of creation: "
+
+#: src/compi.py:728
+msgid "Ruta de guardado: "
+msgstr "Save path: "
+
+#: src/compi.py:729
+msgid "Modificable: "
+msgstr "Writable: "
+
+#: src/compi.py:755
+msgid "Abrir mosaico"
+msgstr "Open mosaic"
+
+#: src/compi.py:861
+msgid ""
+"No se ha encontrado contactos previamente almacenados. Edite el mosaico que "
+"se abrirá a continuación y no olvide\n"
+"guardar los cambios."
+msgstr ""
+
+#: src/compi.py:864
+msgid "Contactos"
+msgstr "Contacts"
+
+#: src/compi.py:891
+msgid "Programadores"
+msgstr "Developers"
+
+#: src/compi.py:896
+msgid "Diseño gráfico"
+msgstr "Graphic design"
+
+#: src/compi.py:900
+msgid "English Beta Translation"
+msgstr ""
+
+#: src/compi.py:910
+msgid "Comunicador Pictográfico de Guadalinex para personas discapacitadas"
+msgstr "Pictographic comunicator for phisically handicapped people"
+
+#: src/compi.py:933
+msgid "Bienvenido al comunicador pictográfico de Guadalinex"
+msgstr "Wellcome to the pictographic comunicator of Guadalinex"
+
+#: src/compi.py:935
+msgid ""
+"Se ha detectado que no están instaladas las librerias Pymedia para "
+"reproducir archivos de audio.\n"
+"Por favor, descargue e instale el paquete de la siguiente dirección para "
+"soportar dichos ficheros:"
+msgstr "Please, download Pymedia libraries for support audio files from:"
+
+#: src/config.py:85
+msgid "Apariencia"
+msgstr "Aparience"
+
+#: src/config.py:87 src/config.py:111
+msgid "Añadir fila"
+msgstr ""
+
+#: src/config.py:88 src/config.py:112
+#, fuzzy
+msgid "Añadir columna"
+msgstr "Add column"
+
+#: src/config.py:98
+msgid "Pantalla"
+msgstr "Fullscreen"
+
+#: src/config.py:123 src/config.py:135 src/config.py:147
+msgid "Vista"
+msgstr "View"
+
+#: src/config.py:143
+msgid "Acciones"
+msgstr "Action"
+
+#: src/config.py:146
+msgid "Inicio"
+msgstr "Home"
+
+#: src/config.py:149
+msgid "e-Correo"
+msgstr "Mail"
+
+#: src/mos.py:278 src/pul.py:510
+msgid "Nombre"
+msgstr "Name"
+
+#: src/mos.py:316
+msgid "Formato del mosaico"
+msgstr "Aparience"
+
+#: src/pul.py:24
+msgid "Leer pronunciación"
+msgstr "Read pronunciation"
+
+#: src/pul.py:25
+msgid "Reproducir archivo"
+msgstr "Play file"
+
+#: src/pul.py:26
+msgid "Cerrar mosaico"
+msgstr "Close mosaic"
+
+#: src/pul.py:27
+msgid "Salir del programa"
+msgstr "Exit"
+
+#: src/pul.py:29
+msgid "Ir a otro mosaico"
+msgstr "Go to..."
+
+#: src/pul.py:30
+msgid "Incrementar volumen"
+msgstr "Incresase volume"
+
+#: src/pul.py:31
+msgid "Decrementar volumen"
+msgstr "Decrease volume"
+
+#: src/pul.py:32
+msgid "Borrar todo el mensaje"
+msgstr "Erase all"
+
+#: src/pul.py:34
+msgid "Enviar por e-correo"
+msgstr "Send by e-mail"
+
+#: src/pul.py:73 src/pul.py:101
+msgid "Clic izquierdo: "
+msgstr "Left-click: "
+
+#: src/pul.py:73 src/pul.py:101
+msgid "Clic derecho: Editar pulsador"
+msgstr "Right-click: Edit button"
+
+#: src/pul.py:73 src/pul.py:101
+msgid "Clic central:   Cortar y pegar"
+msgstr "Middle-click: Cut&Paste"
+
+#: src/pul.py:383
+msgid "No se puede acceder al archivo "
+msgstr "Couldn't open the file "
+
+#: src/pul.py:383
+msgid ". Revise que existe y que tiene permisos de lectura."
+msgstr ". Check it exists and you have read permission"
+
+#: src/pul.py:424
+msgid "El siguiente mensaje se enviará automáticamente en 5 segundos"
+msgstr "The message will be delivered in 5 seconds"
+
+#: src/pul.py:426
+msgid "DE:"
+msgstr "FROM:"
+
+#: src/pul.py:428
+msgid "PARA:"
+msgstr "TO:"
+
+#: src/pul.py:430
+msgid "ASUNTO:"
+msgstr "SUBJECT:"
+
+#: src/pul.py:490
+msgid "No ha configurado aún las opciones de correo saliente."
+msgstr "Outgoing mail server settings not configured yet"
+
+#: src/pul.py:502
+msgid "Propiedades del Pulsador"
+msgstr "Properties of the Button"
+
+#: src/pul.py:511
+msgid "Imagen"
+msgstr "Picture"
+
+#: src/pul.py:514
+msgid "Acción"
+msgstr "Action"
+
+#: src/pul.py:543 src/pul.py:545
+msgid "Examinar"
+msgstr "Search"
+
+#: src/pul.py:610
+msgid "Pronunciación"
+msgstr "Pronunciation"
+
+#: src/pul.py:616
+msgid "Sonido"
+msgstr "Sound"
+
+#: src/pul.py:631
+msgid "Mosaico"
+msgstr "Mosaic"
+
+#: src/pul.py:637
+msgid "Correo"
+msgstr "Mail"
+
+#: src/pul.py:728
+msgid "Audio"
+msgstr "Audio"
+
+#: src/pul.py:740
+msgid "Seleccione una imagen"
+msgstr "Select a picture"
+
+#: src/pul.py:749
+msgid "Seleccione un archivo de audio"
+msgstr "Select an audio file"
+
+#: src/pul.py:755
+msgid "Seleccione una mosaico"
+msgstr "Select a mosaic"
+
+#~ msgid "Este programa aún no ha sido traducido a otros idiomas"
+#~ msgstr "This programm has not been translated yet."
