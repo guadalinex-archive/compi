@@ -52,9 +52,9 @@ class Mosaico(gtk.Frame):
                 self.config["tabla_botones"].append([])
                 for j in range(columnas):
                     if nombre == "*Contactos*":
-                        p = Pulsador( tipo = "contacto")
+                        p = Pulsador( tipo = "contacto", parent = self)
                     else:
-                        p = Pulsador()
+                        p = Pulsador(None, self)
                     self.config["tabla_botones"][i].append(p)
             self.dibujar_tabla()
         self.add(self.rejilla)

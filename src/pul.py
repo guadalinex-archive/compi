@@ -669,7 +669,7 @@ class Propiedades:
         self.actualizar(None)
         self.pulsador_original.config = self.pulsador.config
         self.pulsador_original.aplicar_formato()
-        self.pulsador_originalmosaico.config["modificado"] = False
+        self.pulsador_original.mosaico.config["modificado"] = True
 
     def actualizar(self, event, o = None):
         model = self.combobox.get_model()
